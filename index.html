@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--Swap 2.1-->
+    <title  > MoonSwap- DEX aggregators.Packer your multi transfer in one transaction and save your cost.Ethereum,Binance,Polygon...</title>
+
+
+
+<style type="text/css">
+
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border-top: none;
+}
+
+
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#FromInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#FromInput:focus {outline: 3px solid #ddd;}
+
+
+#ToInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#ToInput:focus {outline: 3px solid #ddd;}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+
+
+
+
+
+
+  .avatar.avatar-online:after {
+    background-color: #71dd37;
+}
+
+.avatar {
+    position: relative;
+    width: 2.375rem;
+    height: 2.375rem;
+    cursor: pointer;
+}
+      .rightIcon{
+        width: : 30px;
+    }
+
+
+    #loader1 {
+  width: 200px;
+  display: none;
+}
+
+    #loader2 {
+  width: 20px;
+  display: none;
+}
+
+
+.bg-nav-white {
+    background-color: #ffffff33!important;
+}
+
+    .Gradient-Background {
+
+        background: linear-gradient(to left top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+        color: #fff;
+    }
+
+
+
+ .btn-success {
+      background-color:#7cffcb;
+      background-image:linear-gradient(to right, rgba(55, 236, 186, 1), rgba(114, 175, 211, 1));
+      }
+      .btn-info {
+      background-color: #eec0c6;
+      background-image: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+      }
+      .btn-secondary {
+      background-color: #7f5a83;
+      background-image: linear-gradient(to right, rgba(106, 133, 182, 1), rgba(186, 200, 224, 1));
+      }
+      .btn-primary {
+      background-color: #2a2a72;
+      background-image: linear-gradient(to right, rgba(85, 221, 94, 1), rgba(102, 166, 255, 1));
+      }
+      .btn-warning {
+      background-color: #f8ceec;
+      background-image: linear-gradient(to right, rgba(94, 231, 223, 1), rgba(180, 144, 202, 1));
+      }
+      .btn- {
+      background-color: #b1bfd8;
+      background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+      }
+      .btn-light {
+      background-color: #42378f;
+      background-image: linear-gradient(315deg, #758283 0%, #CAD5E2 74%);
+      }
+      .btn-danger {
+      background-color: #2a2a72;
+      background-image: (to right, rgba(166, 192, 254, 1), rgba(246, 128, 132, 1));
+      }
+            .btn-dark {
+      background-color: #2a2a72;
+      background-image: (to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
+      }
+     
+      button{
+     
+      outline: none;
+      border:0px;
+      border-radius: 40px;
+   
+      margin:10px;
+      cursor: pointer;
+      color: #fff;
+      background-size: 280% 180%;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+      transition:all .4s ease-in-out;
+      border: 0px !important;
+      }
+      button:hover{
+      background-position: 90% 0;
+      transition: all .2s ease-in-out;
+      }
+
+
+
+</style>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top"  class="text-secondary font-weight-light Gradient-Background">
+
+    <!-- Page Wrapper -->
+    <div id=" ">
+
+        <!-- Sidebar -->
+
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light rounded  bg-nav-white topbar m-3 static-top shadow">
+
+<div><img src="img/moon.png" width="33" height="33"> <b class="m-1 text-dark">MoonSwap </b></div>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search 
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+-->
+                    <!-- Topbar Navbar ml-auto-->
+                    <ul class="navbar-nav ml-auto">
+ 
+
+<li class=" my-auto mx-2 shadow ">
+   <select class="custom-select " id="SelectOptionID" onchange="SelectOptionChange( )">
+  
+
+
+  <option value="56"  class="lang" key="Binance">Binance</option>
+  <option value="137">Polygon </option> 
+  <option value="250">Fantom</option> 
+  <option value="43114">Avalanche</option>
+   <option value="25">Cronos</option>  
+  <option value="128" class="lang" key="Huobi">Huobi</option> 
+
+
+
+<!--
+     <option value="1"  class="lang" key="Ethereum">Ethereum</option>
+     <option value="3" >Ropsten Testnet Chain</option> 
+    
+     <option value="13381">Phoenix</option>  
+     <option value="534">Candle</option>  
+-->
+
+
+
+  </select>
+
+</li>
+
+
+<!--
+
+<li class=" my-auto mx-2 shadow ">
+<a href="https://youtu.be/HDyPbMbA-Og" target="blank"  ><button class="btn btn-primary">How to use</button></a>
+
+</li>
+-->
+
+<li class="my-auto mx-2 shadow">
+<a href="https://github.com/CryptoDappRun/MoonSwap" target="blank"  ><button class="btn btn-info">Github</button></a>
+</li>
+ 
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts 
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts 
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>-->
+                            <!-- Dropdown - Alerts 
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+-->
+                        <!-- Nav Item - Messages 
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages 
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>-->
+                            <!-- Dropdown - Messages 
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+-->
+
+
+                            <!--
+<button id="en" class="translate">English</button>
+<button id="zh" class="translate">简体中文</button>
+<button id="ru" class="translate">русский</button> 
+<button id="kr" class="translate">한국어</button> 
+<button id="fa" class="translate">فارسی</button> 
+<button id="jp" class="translate">日本語</button> 
+<button id="th" class="translate">ไทย</button> 
+                            -->
+
+  
+<!-- language -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                                
+                                <img class="img-profile rounded-circle"
+                                    src="img/lang.png">
+                            </a>
+                            
+
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a id="en" class="dropdown-item translate" href="#">
+                                    <i  class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    English
+                                </a>
+                                <a id="zh"  class="dropdown-item translate" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
+                                   简体中文
+                                </a>
+
+                                 
+ 
+
+								<a id="ru"  class="dropdown-item translate" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
+                                  русский
+                                </a>
+                                <a id="kr"  class="dropdown-item translate" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
+                                  한국어
+                                </a>
+                           <!--     <div class="dropdown-divider"></div>-->
+                       
+                            </div>
+                              
+                        </li>
+
+
+<!-- language -->
+
+
+
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+
+
+
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span  id='CurrentAddress' class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/metamask.png">
+                            </a>
+                            <!-- Dropdown - User Information
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                             -->
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid d-flex justify-content-center">
+
+                    <!-- Page Heading 
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+-->
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Earnings (Monthly)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Earnings (Monthly) Card Example 
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Earnings (Annual)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+-->
+                        <!-- Earnings (Monthly) Card Example
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example 
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Pending Requests</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        
+
+                         
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row m-5 w-50">
+
+                        <!-- Content Column -->
+                       
+
+                        <div class="col-lg-12 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+               <h6 class="m-0 font-weight-bold text-primary lang" key="Token MultiSender"> </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center  ">
+                                        <img   src="img/moon.png" width="33" height="33">
+                                    </div>
+
+
+
+									<div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">MoonSwap</h1>
+                                    </div>
+                                    <div class="text-center">
+                                     
+                                        <h1 class="h6 text-gray-900 mb-4 lang" key="SiteTitle">Find best price for you!</h1>
+ 
+
+                                    </div>
+
+
+
+    <!--
+ <div class="card-body">
+<div class="text-center">
+
+
+
+
+  <select class="custom-select w-25" id="SelectISend" onchange="ISendChange( )">
+  
+   <option value="1"  class="lang" key="Ethereum">Ethereum</option>
+  <option value="56"  class="lang" key="Binance">Binance</option>
+  <option value="128" class="lang" key="Huobi">Huobi</option> 
+  <option value="137">Polygon </option> 
+  <option value="250">Fantom</option> 
+  <option value="43114">Avalanche</option>  
+   <option value="25">Cronos</option>  
+   <option value="13381">Phoenix</option>  
+<option value="534">Candle</option>  
+  <option value="3" >Ropsten Testnet Chain</option> 
+
+  </select>
+
+ 
+ 
+<ul class="navbar-nav ml-auto  ">
+<li class="nav-item dropdown no-arrow d-flex justify-content-center  ">
+                            <a class="nav-link dropdown-toggle " href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                
+                                
+                                <img  width="60" height="60" id="CurrentBlockchainImageID" class="img-profile rounded-circle shadow" src="img/1.png">
+                            </a>
+                            
+
+                            
+                            <div id="ChooseBlockchainDIVid" class="dropdown-menu dropdown-menu-center  " aria-labelledby="userDropdown" style="position: absolute; transform: translate3d(326px, 66px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+                            
+                       
+                            </div>
+
+
+                              
+                        </li>
+
+                        </ul>
+
+
+                       
+
+
+
+
+<div  class="text-muted " id="BlockchainNameID" >   </div>
+<div><small class="text-muted" id="SendFeeText" >    </small></div>
+
+
+
+</div></div>
+
+-->
+
+
+
+
+
+
+
+
+
+<form>
+<div class="form-group">
+</div>
+</form>
+
+
+<!--container div-->
+<div class="container">
+
+
+<div class="row d-flex justify-content-center ">
+
+
+<div class="card shadow m-2 col-8">
+
+
+
+
+<!--from div-->
+<div class="row d-flex justify-content-center mt-5 ml-5 mr-5">
+
+<div class="card shadow mb-4  col-md-9">
+
+
+<div class="dropdown mr-2">
+
+<div class="shadow rounded m-2 d-flex justify-content-center">
+<img id="FromImage" width="30" height="30" class="m-2 rounded" src="img/icon/bitcoin.png">
+
+<button id="FromButton" onclick="ShowISendFilter()" class="btn btn-primary rounded m-1">From⌄</button>
+
+<button id="approveThisButton" onclick="approveThis()" class="btn btn-primary rounded m-1">Approve</button>
+
+<!--UserFromCoinAddress-->
+<div id="UserFromCoinAddress" class="m-3 ">
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<div id="SelectISend" class="dropdown-content ">
+    
+
+<input type="text" placeholder="Search.." id="FromInput"  onkeyup="filterFunction()">
+    
+<!-- 
+<a href="#about"><img width="30" height="30" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png">About</a>
+
+
+   <a href="#about"><img width="30" height="30" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png">About</a>
+
+-->
+
+<div id="FromListContent">
+	
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="mr-2">
+<input id="ISendAmount" type="text" class="form-control rounded m-2 col-md-12 " name="coins-exchange" placeholder="" value="1"   onkeyup="delayRun(this.value)"  >                
+</div>
+
+
+<div class="row ">
+<div id="SendBalance" class="m-2">
+</div>
+
+<div>
+<img id="loader2"   src="loadingdata.gif"></img>
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!--switch direction div-->
+<div class="row d-flex justify-content-center">
+
+  
+
+<button id="SwapButton" onclick="SwitchToken()" class="btn btn-success rounded m-1">⌄</button>
+
+
+
+</div>
+
+
+
+
+
+<!--loader2 div width="100" height="50" 
+<div class="row d-flex justify-content-center">
+
+
+
+</div>-->
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<!--To div-->
+<div class="row d-flex justify-content-center  ml-5 mr-5">
+
+
+<div class="card shadow mb-4  col-md-9">
+
+
+<div class="dropdown mr-2">
+
+<div class="shadow rounded m-2 d-flex justify-content-center">
+<img id="ToImage" width="30" height="30" class="m-2 rounded" src="img/icon/bitcoin.png">
+
+<button id="ToButton" onclick="ShowIWantFilter()" class="btn btn-primary rounded m-1">To⌄</button>
+
+<!--UserChooseCoinAddress-->
+<div id="UserChooseCoinAddress" class="m-3 ">
+</div>
+
+
+</div>
+
+
+
+
+<div id="SelectIWant" class="dropdown-content ">
+    
+
+<input type="text" placeholder="Search.." id="ToInput"  onkeyup="ToFilterFunction()">
+    
+
+<div id="ToListContent">
+	
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="mr-2">
+<input id="IReciveAmount" type="text" class="form-control rounded m-2 col-md-12 " name="coins-exchange" placeholder="" value="1" onchange="UpdateInfo()">                
+</div>
+
+
+
+<div id="RecieveBalance" class="m-2">
+</div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+<!--loading gif-->
+<div class="row d-flex justify-content-center m-2">
+<div id="TradeNowID" class="mr-2">
+ <img id="loader1"    src="loading.gif"></img>
+</div>
+</div>
+
+
+
+<!--TradeNow-->
+<div class="row d-flex justify-content-center m-2">
+<div id="TradeNowID" class="mr-2">
+<button id="TradeNowButton" onclick="SwapNow()" class="btn btn-dark rounded m-1">Swap</button>
+
+</div>
+</div>
+
+
+
+<!--Tips-->
+<div class="row d-flex justify-content-center m-2">
+<div id="Tips" class="mr-2">
+</div>
+</div>
+
+
+
+
+
+
+<!--Table-->
+<div class="row d-flex justify-content-center m-2">
+
+						<table class="table table-lg table-separated ">
+						  <thead>
+
+<!--
+							<tr>
+							  <th>Exchange</th>
+							  <th>Pair</th>
+							  <th>Recieve Amount</th>
+ 
+							</tr>
+-->
+
+						  </thead>
+						  <tbody  id="RouterTable">
+								
+						  </tbody>
+						</table>
+</div>
+
+
+
+<!-- -->
+</div>
+
+<!-- -->
+</div>
+
+
+<!--container-->
+</div>
+
+
+<!--
+<select id = "SelectISend" class="LeftOption" name="state" onchange="ISendChange( )">
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--to div
+<div class="card shadow mb-4">
+
+
+<div class="dropdown mr-2">
+  <button id="FromButton" onclick="ShowFilter()" class="dropbtn rounded m-2">Dropdown</button>
+  <div id="SelectIWant" class="dropdown-content rounded">
+    <input type="text" placeholder="Search.." id="ToInput" class="rounded m-2" onkeyup="filterFunction()">
+    <a href="#about"><img width="30" height="30" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png">About</a>
+    <a href="#base"  onclick="UserChooseFromItem();return false;" >Base</a>
+    <a href="#blog" onclick="UserChooseFromItem();return false;">Blog</a>
+    <a href="#contact" onclick="UserChooseFromItem();return false;">Contact</a>
+    <a href="#custom" onclick="UserChooseFromItem();return false;">Custom</a>
+    <a href="#support" onclick="UserChooseFromItem();return false;">Support</a>
+    <a href="#tools" onclick="UserChooseFromItem();return false;">Tools</a>
+
+  </div>
+</div>
+
+<input id="ISendAmount" type="text" class="form-control rounded m-2" name="coins-exchange" placeholder="" value="1" >                
+
+
+</div>
+
+-->
+
+
+
+
+
+
+                                        
+
+                                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    
+
+
+                                  
+                                  <!-- <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
+                                        unDraw &rarr;</a>--> 
+                                </div>
+                            </div>
+
+                            <!-- Approach 
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                </div>
+                                <div class="card-body">
+                                 <img  src="img/example.png"  >
+                                    <p> </p>
+                                </div>
+                            </div>-->
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+<footer class="pt-4 my-md-5   shadow">
+    <div class="container  text-white">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-4">
+                    <h5> </h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://dapp404.com/Token-Factory/" class="nav-link p-0 text-dark ">Token Factory</a></li>
+                        <li class="nav-item mb-2"><a href="https://dapp404.com/Bee-Sender/" class="nav-link p-0 text-dark ">Token Multi Sender</a></li>
+                        
+
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <h5> </h5>
+                    <ul class="nav flex-column">
+
+                      
+                     
+                    </ul>
+                </div>
+
+                <div class="col-4">
+                    <h5> </h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://github.com/CryptoDappRun/MoonSwap/issues" class="nav-link p-0 text-dark">Support</a></li>
+
+
+<!--
+                        <li class="nav-item mb-2"><a href="https://github.com/AlgoNetwork/EasyNFT-Generator-Bulk-NFT-to-Opensea" class="nav-link p-0 text-dark">Bulk NFT</a></li>
+
+
+                        <li class="nav-item mb-2"><a href="https://github.com/AlgoNetwork/NFTBox-NFT-Staking-Market" class="nav-link p-0 text-dark">NFT Box-NFT Staking Market</a></li>
+-->
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="d-flex justify-content-between text-dark py-4 my-4  ">
+                <p>© 2022 AlgoNetwork, All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+   <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins 
+    <script src="vendor/chart.js/Chart.min.js"></script>
+-->
+    <!-- Page level custom scripts
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+ -->
+
+
+   <script src="js/all.min.js"   crossorigin="anonymous"></script>
+    <script src="js/contract.js"></script>
+    <script src="js/token.js"></script>
+     <script src="js/config.js"></script>
+      <script src="js/global.js"></script>
+    <!--https://code.jquery.com/jquery-3.5.1.slim.min.js-->
+    <!--<script src="js/jquery-3.5.1.slim.min.js"    integrity=""></script>-->
+    <script src="js/popper.min.js"  integrity=""></script>
+
+    <!--https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js-->
+    <!--<script src="js/bootstrap.min.js"       integrity=""     ></script>-->
+ 
+
+     <script src='js/bignumber.js'></script>
+<script src="js/web3.min.js"></script>
+
+
+<script  >
+// CHECK IF IMAGE EXISTS
+async function checkIfImageExists(url, callback) {
+  const img = new Image();
+  img.src = url;
+  
+  if (img.complete) {
+    callback(true);
+  } else {
+    img.onload = () => {
+      callback(true);
+    };
+    
+    img.onerror = () => {
+      callback(false);
+    };
+  }
+}
+
+</script>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>-->
+  
+<script src="js/contract.js"></script>
+
+<script src="js/networks/Avalanche.js"></script>
+<script src="js/networks/Polygon.js"></script>
+<script src="js/networks/Binance.js"></script>
+<script src="js/networks/Fantom.js"></script>
+<script src="js/networks/Heco.js"></script>
+<script src="js/networks/Cronos.js"></script>
+
+
+<script type="text/javascript">
+    var arrLang = {
+      'en': {
+        'SiteTitle': 'Bee Sender-ERC20 Token Multi Sender.Packer your multi transfer in one transaction and save your cost.',
+        'Ethereum': 'Ethereum',
+        'Binance': 'Binance',
+        'Huobi': 'Huobi',
+        'Token Address': 'Token Address',
+
+      'zh': {
+        'SiteTitle': 'Bee Sender-同时发送代币和本币给多个地址',
+        'Ethereum': '以太坊链',
+        'Binance': '币安链',
+        'Huobi': '火币链',
+        'Token Address': '代币地址',
+
+
+      },
+
+      'ru': {
+        'SiteTitle': 'Bee Sender-ERC20 Token Multi Sender. Упакуйте мультиперевод в одну транзакцию и сэкономьте на затратах.',
+        'Ethereum': 'Ethereum',
+        'Binance': 'Binance',
+        'Huobi': 'Huobi',
+        'Token Address': 'Адрес токена',
+
+      },
+
+
+      'kr': {
+        'SiteTitle': 'Bee Sender-ERC20 Token Multi Sender.Packer는 하나의 트랜잭션으로 다중 전송을 수행하고 비용을 절약합니다.',
+        'Ethereum': 'Ethereum',
+        'Binance': 'Binance',
+        'Huobi': 'Huobi',
+        'Token Address': '토큰 주소',
+
+      },
+      'fa': {
+ 
+      },
+
+      'jp': {
+ 
+      },
+
+      'th': {
+ 
+      }
+
+    };
+
+    // Process translation
+    $(function() {
+      $('.translate').click(function() {
+        var lang = $(this).attr('id');
+console.log("change language..");
+        $('.lang').each(function(index, item) {
+          $(this).text(arrLang[lang][$(this).attr('key')]);
+        });
+      });
+    });
+  </script>
+
+
+
+<script>
+ 
+
+
+var _0x17f5a1=_0x5c5f;(function(_0x58378e,_0x80b8b6){var _0x3ebf0b=_0x5c5f,_0x1a34d3=_0x58378e();while(!![]){try{var _0x2006ef=parseInt(_0x3ebf0b(0x1d2))/0x1+-parseInt(_0x3ebf0b(0x11f))/0x2*(parseInt(_0x3ebf0b(0x16e))/0x3)+-parseInt(_0x3ebf0b(0x233))/0x4+parseInt(_0x3ebf0b(0x2d2))/0x5+parseInt(_0x3ebf0b(0x172))/0x6*(parseInt(_0x3ebf0b(0x295))/0x7)+-parseInt(_0x3ebf0b(0x1bf))/0x8*(-parseInt(_0x3ebf0b(0x25e))/0x9)+-parseInt(_0x3ebf0b(0x179))/0xa*(parseInt(_0x3ebf0b(0x18c))/0xb);if(_0x2006ef===_0x80b8b6)break;else _0x1a34d3['push'](_0x1a34d3['shift']());}catch(_0x12018b){_0x1a34d3['push'](_0x1a34d3['shift']());}}}(_0x1c99,0x609a4));var Coins={'1':{'Name':'Ethereum','ID':'1','Symbol':_0x17f5a1(0x11c)},'56':{'Name':_0x17f5a1(0x2a7),'ID':'56','Symbol':'BNB'},'128':{'Name':'Huobi','ID':_0x17f5a1(0x117),'Symbol':'HB'},'137':{'Name':_0x17f5a1(0x1ca),'ID':_0x17f5a1(0x286),'Symbol':_0x17f5a1(0x17c)},'250':{'Name':_0x17f5a1(0x161),'ID':_0x17f5a1(0x1b4),'Symbol':_0x17f5a1(0x1ec)},'43114':{'Name':_0x17f5a1(0x2a9),'ID':_0x17f5a1(0x134),'Symbol':_0x17f5a1(0x183)},'25':{'Name':'Cronos','ID':'25','Symbol':_0x17f5a1(0x27d)},'13381':{'Name':_0x17f5a1(0x270),'ID':_0x17f5a1(0x186),'Symbol':'PHX'},'534':{'Name':'Candle','ID':_0x17f5a1(0x1f9),'Symbol':_0x17f5a1(0x15c)},'3':{'Name':_0x17f5a1(0x122),'ID':'3','Symbol':'RopstenETH'}};console[_0x17f5a1(0x219)](_0x17f5a1(0x182),FeeReciever),console[_0x17f5a1(0x219)](_0x17f5a1(0x248));var UseTokens,UseAdapters,UseScan,PolygonScanURL=_0x17f5a1(0x2e3),AvalancheScanURL='https://avascan.info/blockchain/c/',BinanceScanURL=_0x17f5a1(0x171),FantomScanURL=_0x17f5a1(0x12a),HecoScanURL='https://hecoinfo.com/',CronosScanURL=_0x17f5a1(0x1a8);let tokenIn,tokenOut;var BeeFee=0.0123456,CSVEtherTotal=0x0,ContractFee,SendTokenBool=![],binanceLimit,polygonLimit,fantomLimit,SendFee,MyTokenBalance,myContract,TransferContract,TokenContract,PriceResult,CurrentTokenDecimals=0x0,EthereumScan=_0x17f5a1(0x2e9),BinanceScan=_0x17f5a1(0x2b1),PolygonScan=_0x17f5a1(0x123),FantomScan=_0x17f5a1(0x25a),CronosScan=_0x17f5a1(0x188),AvalancheScan=_0x17f5a1(0x14a),PhoenixScan=_0x17f5a1(0x202),RopstenScan=_0x17f5a1(0x28c),KovanScan='https://ropsten.etherscan.io/tx/',CandleScan=_0x17f5a1(0x131);console['log'](_0x17f5a1(0x2ec));var TokenContractAddress,BlockchainScan,RopstenTokenAddress=_0x17f5a1(0x2ea),KovanTokenAddress=_0x17f5a1(0x162),binanceTokenAddress=_0x17f5a1(0x22b),polygonTokenAddress=_0x17f5a1(0x137),fantomTokenAddress=_0x17f5a1(0x1e8),contractAdress,RopstenAddress='',KovanAddress='',BinanceTestContractAddress='',EthereumContractAddress='',HuobiContractAddress='',BinanceContractAddress=_0x17f5a1(0x2b3),PolygonContractAddress=_0x17f5a1(0x1f1),FantomContractAddress=_0x17f5a1(0x2e5),AvalancheContractAddress=_0x17f5a1(0x28b),HecoContractAddress='0x520827a2897587FcF6c30A9C0e549ec5216148D6',CronosContractAddress='0x57c90b1C343624C224Bc6Edc4841A005E00f350b',PhoenixContractAddress='',CandleContractAddress='',Isend,Iwant;window['onload']=function(){document['onclick']=function(_0x5b5974){var _0x5bc975=_0x5c5f;_0x5b5974['target']['id']!='SelectISend'&&_0x5b5974[_0x5bc975(0x2ba)]['id']!=_0x5bc975(0x2cf)&&_0x5b5974[_0x5bc975(0x2ba)]['id']!=_0x5bc975(0x17a)&&$(_0x5bc975(0x1b6))[_0x5bc975(0x2ef)](),_0x5b5974[_0x5bc975(0x2ba)]['id']!=_0x5bc975(0x207)&&_0x5b5974[_0x5bc975(0x2ba)]['id']!=_0x5bc975(0x2dc)&&_0x5b5974[_0x5bc975(0x2ba)]['id']!=_0x5bc975(0x2d5)&&$('#SelectIWant')[_0x5bc975(0x2ef)]();};};async function CheckMetamaskConnection(){var _0x4086=_0x17f5a1;if(window[_0x4086(0x152)]){window[_0x4086(0x2b6)]=new Web3(window[_0x4086(0x152)]);try{return await ethereum[_0x4086(0x29b)](),window[_0x4086(0x152)]['on'](_0x4086(0x12c),function(_0x30831b){var _0x1caa4c=_0x4086;console[_0x1caa4c(0x219)](_0x1caa4c(0x277),_0x30831b),window[_0x1caa4c(0x173)]['reload']();}),window[_0x4086(0x152)]['on'](_0x4086(0x1ff),function(_0x5f101d){var _0x3af6cb=_0x4086;console[_0x3af6cb(0x219)](_0x3af6cb(0x1ff),_0x5f101d),window[_0x3af6cb(0x173)][_0x3af6cb(0x20f)]();}),!![];}catch(_0x13dd83){return![];}}else return window['web3']?(window[_0x4086(0x2b6)]=new Web3(web3[_0x4086(0x24d)]),!![]):(console[_0x4086(0x219)]('Non-Ethereum\x20browser\x20detected.\x20You\x20should\x20consider\x20trying\x20MetaMask!'),![]);}$(document)['ready'](async function(){var _0x5337ae=_0x17f5a1;$(_0x5337ae(0x1cb))['click'](function(){var _0x2815ed=_0x5337ae;$(_0x2815ed(0x2e2))[_0x2815ed(0x26a)](_0x2815ed(0x1b9));});var _0x147b66=await CheckMetamaskConnection();if(_0x147b66){var _0x35d8a1=!![],_0x393231=await web3[_0x5337ae(0x28e)][_0x5337ae(0x289)]['getId']();console[_0x5337ae(0x219)](_0x393231);var _0x167b16=![];switch(_0x393231){case 0x1:console[_0x5337ae(0x219)](_0x5337ae(0x19f)),contractAdress=EthereumContractAddress,BlockchainScan=EthereumScan,BeeFee=EthereumFee,_0x167b16=!![];break;case 0x2:console[_0x5337ae(0x219)](_0x5337ae(0x271));break;case 0x3:console[_0x5337ae(0x219)](_0x5337ae(0x1bd)),TokenContractAddress=RopstenTokenAddress,contractAdress=RopstenAddress,BlockchainScan=RopstenScan,_0x167b16=!![],BeeFee=RopstenFee;break;case 0x19:console['log'](_0x5337ae(0x2e0)),UseTokens=CronosTokens['tokens'],UseAdapters=CronosTokens[_0x5337ae(0x260)],UseScan=CronosScanURL,await addTokenList(),console[_0x5337ae(0x219)](_0x5337ae(0x1a7),UseTokens),contractAdress=CronosContractAddress,MainCoin=UseTokens[0x0][_0x5337ae(0x2cc)],console[_0x5337ae(0x219)]('MainCoin\x20is\x20',MainCoin),await LoadMainCoinBalance(),_0x167b16=!![];break;case 0x2a:console['log']('This\x20is\x20the\x20Kovan\x20\x20network.'),contractAdress=KovanAddress,BlockchainScan=KovanScan,_0x167b16=!![],BeeFee=RopstenFee;break;break;case 0x38:console[_0x5337ae(0x219)]('This\x20is\x20Binance\x20mainnet'),UseTokens=BinanceTokens[_0x5337ae(0x192)],UseAdapters=BinanceTokens['adapters'],UseScan=BinanceScanURL,await addTokenList(),console[_0x5337ae(0x219)](_0x5337ae(0x258),BinanceTokens),contractAdress=BinanceContractAddress,MainCoin=UseTokens[0x0][_0x5337ae(0x2cc)],console[_0x5337ae(0x219)](_0x5337ae(0x167),MainCoin),await LoadMainCoinBalance(),_0x167b16=!![];break;case 0x61:contractAdress=BinanceTestContractAddress,console[_0x5337ae(0x219)](_0x5337ae(0x2de));break;case 0x6c:console['log'](_0x5337ae(0x292));break;case 0x80:console[_0x5337ae(0x219)](_0x5337ae(0x27a)),UseTokens=HecoTokens['tokens'],UseAdapters=HecoTokens[_0x5337ae(0x260)],UseScan=HecoScanURL,await addTokenList(),console[_0x5337ae(0x219)](_0x5337ae(0x19e),UseTokens),contractAdress=HecoContractAddress,MainCoin=UseTokens[0x0][_0x5337ae(0x2cc)],console[_0x5337ae(0x219)]('MainCoin\x20is\x20',MainCoin),await LoadMainCoinBalance(),_0x167b16=!![];break;case 0x89:console['log'](_0x5337ae(0x2bf)),UseTokens=PolygonTokens[_0x5337ae(0x192)],UseAdapters=PolygonTokens[_0x5337ae(0x260)],UseScan=PolygonScanURL,await addTokenList(),console[_0x5337ae(0x219)](_0x5337ae(0x27e),PolygonTokens),contractAdress=PolygonContractAddress,ChooseSendTokenAddress=_0x5337ae(0x145),MainCoin=UseTokens[0x0][_0x5337ae(0x2cc)],console[_0x5337ae(0x219)](_0x5337ae(0x167),MainCoin),await LoadMainCoinBalance(),_0x167b16=!![];break;case 0xfa:console[_0x5337ae(0x219)](_0x5337ae(0x249)),UseTokens=FantomTokens[_0x5337ae(0x192)],UseAdapters=FantomTokens['adapters'],UseScan=FantomScanURL,await addTokenList(),console[_0x5337ae(0x219)](_0x5337ae(0x2bb),UseTokens),contractAdress=FantomContractAddress,MainCoin=UseTokens[0x0]['symbol'],console[_0x5337ae(0x219)](_0x5337ae(0x167),MainCoin),await LoadMainCoinBalance(),_0x167b16=!![];break;case 0x216:console['log'](_0x5337ae(0x13c)),contractAdress=CandleContractAddress,BlockchainScan=CandleScan,BeeFee=CandleFee,_0x167b16=!![];break;case 0x3445:console[_0x5337ae(0x219)](_0x5337ae(0x2c5)),contractAdress=PhoenixContractAddress,BlockchainScan=PhoenixScan,BeeFee=PhoenixFee,_0x167b16=!![];break;case 0xa86a:console[_0x5337ae(0x219)](_0x5337ae(0x15e)),UseTokens=avalancheTokens[_0x5337ae(0x192)],UseAdapters=avalancheTokens[_0x5337ae(0x260)],UseScan=AvalancheScanURL,await addTokenList(),console[_0x5337ae(0x219)](_0x5337ae(0x2bb),UseTokens),contractAdress=AvalancheContractAddress,MainCoin=UseTokens[0x0]['symbol'],console['log'](_0x5337ae(0x167),MainCoin),await LoadMainCoinBalance(),_0x167b16=!![];break;default:document['getElementById']('CurrentBlockchainImageID')[_0x5337ae(0x127)]=_0x5337ae(0x26b)+_0x5337ae(0x1b5),console[_0x5337ae(0x219)](_0x5337ae(0x1e1));}if(!_0x167b16){$(_0x5337ae(0x1c2))[_0x5337ae(0x2b8)](_0x5337ae(0x159)),console[_0x5337ae(0x219)]('Not\x20in\x20range,Exit');throw new Error(_0x5337ae(0x273));}$(_0x5337ae(0x235))[_0x5337ae(0x2b8)](_0x5337ae(0x150)+Coins[_0x393231][_0x5337ae(0x21b)]),$('#BlockchainNameID')[_0x5337ae(0x2b8)](Coins[_0x393231]['Name']),document[_0x5337ae(0x253)](_0x5337ae(0x20d))[_0x5337ae(0x2ae)]=_0x393231;var _0x41aff1=web3[_0x5337ae(0x24d)][_0x5337ae(0x2e1)],_0x27229e=web3['currentProvider'][_0x5337ae(0x2e1)],_0x1bb933=web3[_0x5337ae(0x24d)][_0x5337ae(0x2e1)][_0x5337ae(0x218)]-0x4,_0x33ca79=_0x27229e['substring'](0x0,0x6),_0x320e9d=_0x27229e[_0x5337ae(0x294)](_0x1bb933,web3[_0x5337ae(0x24d)][_0x5337ae(0x2e1)][_0x5337ae(0x218)]),_0x3a2fdd=_0x33ca79+_0x5337ae(0x147)+_0x320e9d;$('#CurrentAddress')[_0x5337ae(0x2b8)](_0x3a2fdd),myContract=await new web3[(_0x5337ae(0x28e))][(_0x5337ae(0x1a1))](SmartContractABI,contractAdress,{'from':web3[_0x5337ae(0x24d)][_0x5337ae(0x2e1)]}),$(_0x5337ae(0x1c3))['hide'](),await UpdateInfo();var _0x26891f=await web3[_0x5337ae(0x28e)][_0x5337ae(0x2a3)](PolygonContractAddress);console[_0x5337ae(0x219)](_0x5337ae(0x16b),_0x26891f);var _0x2c81fa=web3['currentProvider'][_0x5337ae(0x2e1)],_0x1c939c,_0x573320,_0x2c9f25;async function _0x1faabc(){var _0x5f2ed0=_0x5337ae,_0x285f4a=await web3[_0x5f2ed0(0x28e)][_0x5f2ed0(0x289)][_0x5f2ed0(0x2a2)]();console[_0x5f2ed0(0x219)](_0x285f4a);switch(_0x285f4a){case 0x1:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x19f));break;case 0x2:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x271));break;case 0x3:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x1bd)),TokenContractAddress=RopstenTokenAddress,contractAdress=RopstenAddress,document[_0x5f2ed0(0x253)](_0x5f2ed0(0x1ae))[_0x5f2ed0(0x2ae)]=0x3;break;case 0x2a:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x1d3)),TokenContractAddress=KovanTokenAddress,contractAdress=KovanAddress,document['getElementById'](_0x5f2ed0(0x1ae))[_0x5f2ed0(0x2ae)]=0x2a;break;case 0x38:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x23a)),TokenContractAddress=binanceTokenAddress,contractAdress=BinanceContractAddress;break;case 0x61:contractAdress=BinanceTestContractAddress,console[_0x5f2ed0(0x219)](_0x5f2ed0(0x2de));break;case 0x6c:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x292));break;case 0x80:console[_0x5f2ed0(0x219)](_0x5f2ed0(0x14e));break;case 0x89:TokenContractAddress=polygonTokenAddress,contractAdress=PolygonContractAddress,console['log']('This\x20is\x20the\x20Polygon\x20\x20network.');break;case 0xfa:TokenContractAddress=fantomTokenAddress,contractAdress=FantomContractAddress,console['log'](_0x5f2ed0(0x20e));break;default:document['getElementById']('CurrentBlockchainImageID')[_0x5f2ed0(0x127)]='img/'+String(0x1)+_0x5f2ed0(0x20a),console[_0x5f2ed0(0x219)]('This\x20is\x20an\x20unknown\x20network.');}document[_0x5f2ed0(0x253)](_0x5f2ed0(0x12e))['src']=_0x5f2ed0(0x26b)+_0x285f4a+_0x5f2ed0(0x20a);}function _0x3e2521(){var _0x2fc4e4=_0x5337ae;fetch(_0x2fc4e4(0x121))[_0x2fc4e4(0x170)](_0x20dd7f=>_0x20dd7f[_0x2fc4e4(0x281)]())['then'](_0xe6eed7=>{var _0x10fe04=_0x2fc4e4;const _0x2e2657=_0xe6eed7[_0x10fe04(0x2d4)];_0x254d09(_0x10fe04(0x2c6))[_0x10fe04(0x2a5)]=_0x10fe04(0x13d)+_0x2e2657[_0x10fe04(0x1f4)][_0x10fe04(0x1e6)][_0x10fe04(0x1bb)](0x0),document[_0x10fe04(0x253)]('price')[_0x10fe04(0x2ae)]=_0x2e2657[_0x10fe04(0x1f4)]['usd'][_0x10fe04(0x1bb)](0x0);});}function _0x254d09(_0x157961){return document['getElementById'](_0x157961);}$(_0x5337ae(0x26c))[_0x5337ae(0x1da)](function(){var _0x281be4=_0x5337ae;$(_0x281be4(0x1c2))['html'](''),$('#transactionHashLabel')[_0x281be4(0x2b8)](''),$(_0x281be4(0x1fe))['show'](),SendMultiToken();}),console[_0x5337ae(0x219)]('Metamask\x20detected!');}else console[_0x5337ae(0x219)](_0x5337ae(0x21d)),$(_0x5337ae(0x1c2))[_0x5337ae(0x2b8)](_0x5337ae(0x169));});async function addTokenList(){var _0x23494a=_0x17f5a1,_0x48c9d4=document[_0x23494a(0x253)](_0x23494a(0x1ae));tokenIn=UseTokens[0x0][_0x23494a(0x268)],tokenOut=UseTokens[0x1][_0x23494a(0x268)],console[_0x23494a(0x219)]('tokenIn\x20init',tokenIn),console[_0x23494a(0x219)](_0x23494a(0x228),tokenOut);let _0x2cdabb=_0x23494a(0x139)+UseTokens[0x0]['symbol']+_0x23494a(0x20a),_0x35de9c=_0x23494a(0x139)+UseTokens[0x1][_0x23494a(0x2cc)]+_0x23494a(0x20a),_0x5f1829=_0x23494a(0x237),_0x869390='img/icon/default.png';checkIfImageExists(_0x2cdabb,_0x155c31=>{_0x155c31&&(_0x5f1829=_0x2cdabb);}),checkIfImageExists(_0x35de9c,_0x4bcea0=>{_0x4bcea0&&(_0x869390=_0x35de9c);}),document[_0x23494a(0x253)](_0x23494a(0x189))[_0x23494a(0x127)]=_0x5f1829,document[_0x23494a(0x253)](_0x23494a(0x2cf))[_0x23494a(0x2a5)]=UseTokens[0x0][_0x23494a(0x2cc)]+'⌄',document[_0x23494a(0x253)](_0x23494a(0x275))[_0x23494a(0x127)]=_0x869390,document['getElementById'](_0x23494a(0x2dc))[_0x23494a(0x2a5)]=UseTokens[0x1]['symbol']+'⌄';var _0x5edf04='';_0x48c9d4!==null&&$[_0x23494a(0x24f)](UseTokens,function(_0x4b0ad9){var _0x309b24=_0x23494a;_0x5edf04+=_0x309b24(0x12b),_0x5edf04+=UseTokens[_0x4b0ad9]['address'],_0x5edf04+='\x22\x20',_0x5edf04+=_0x309b24(0x25f),_0x5edf04+=UseTokens[_0x4b0ad9][_0x309b24(0x2cc)],_0x5edf04+='\x27',_0x5edf04+=',',_0x5edf04+='\x27',_0x5edf04+=UseTokens[_0x4b0ad9][_0x309b24(0x268)],_0x5edf04+='\x27)\x22\x20/>';let _0x5559a3=_0x309b24(0x139)+UseTokens[_0x4b0ad9][_0x309b24(0x2cc)]+_0x309b24(0x20a),_0x437a=_0x309b24(0x237);checkIfImageExists(_0x5559a3,_0x56fc60=>{if(_0x56fc60)_0x437a=_0x5559a3;else{}}),_0x5edf04+='<img\x20class=\x22m-1\x20rounded\x22\x20\x20src=\x22',_0x5edf04+=_0x437a,_0x5edf04+=_0x309b24(0x224),_0x5edf04+=UseTokens[_0x4b0ad9][_0x309b24(0x174)],_0x5edf04+=_0x309b24(0x208);});var _0x2611a3='';_0x48c9d4!==null&&$[_0x23494a(0x24f)](UseTokens,function(_0x8b8595){var _0x4d8652=_0x23494a;_0x2611a3+=_0x4d8652(0x12b),_0x2611a3+=UseTokens[_0x8b8595][_0x4d8652(0x268)],_0x2611a3+='\x22\x20',_0x2611a3+=_0x4d8652(0x2d9),_0x2611a3+=UseTokens[_0x8b8595]['symbol'],_0x2611a3+='\x27',_0x2611a3+=',',_0x2611a3+='\x27',_0x2611a3+=UseTokens[_0x8b8595][_0x4d8652(0x268)],_0x2611a3+=_0x4d8652(0x264);let _0x4dd9da='img/icon/'+UseTokens[_0x8b8595][_0x4d8652(0x2cc)]+_0x4d8652(0x20a),_0x1160a7=_0x4d8652(0x237);checkIfImageExists(_0x4dd9da,_0x4831c0=>{if(_0x4831c0)_0x1160a7=_0x4dd9da;else{}}),_0x2611a3+=_0x4d8652(0x155),_0x2611a3+=_0x1160a7,_0x2611a3+=_0x4d8652(0x224),_0x2611a3+=UseTokens[_0x8b8595]['name'],_0x2611a3+='</a>';}),$(_0x23494a(0x1fd))[_0x23494a(0x124)](_0x5edf04),$(_0x23494a(0x184))[_0x23494a(0x124)](_0x2611a3);}async function UpdateInfo(){var _0x104b9e=_0x17f5a1;try{await UpdateInfoDetail();}catch(_0x2b850f){$(_0x104b9e(0x185))['removeAttr'](_0x104b9e(0x238)),$(_0x104b9e(0x1d0))[_0x104b9e(0x2ef)](),console['log'](_0x104b9e(0x2be),_0x2b850f);}}async function UpdateInfoDetail(){var _0x5db5c0=_0x17f5a1;document[_0x5db5c0(0x253)](_0x5db5c0(0x28f))[_0x5db5c0(0x238)]=!![],console[_0x5db5c0(0x219)](_0x5db5c0(0x144)),$(_0x5db5c0(0x1d0))['show'](),$(_0x5db5c0(0x185))['hide'](),ISendobj=document[_0x5db5c0(0x253)]('SelectISend'),IWantobj=document[_0x5db5c0(0x253)](_0x5db5c0(0x207));let _0xcccbf8=document[_0x5db5c0(0x253)](_0x5db5c0(0x2cf))['innerHTML'][_0x5db5c0(0x222)]('⌄',''),_0xfc880f=document[_0x5db5c0(0x253)](_0x5db5c0(0x2dc))['innerHTML'][_0x5db5c0(0x222)]('⌄','');console['log'](_0x5db5c0(0x2b4),_0xcccbf8),console[_0x5db5c0(0x219)](_0x5db5c0(0x1f0),_0xfc880f);if(parseFloat(document[_0x5db5c0(0x253)]('ISendAmount')[_0x5db5c0(0x2ae)])>0x0&&document[_0x5db5c0(0x253)]('FromButton')[_0x5db5c0(0x2a5)]!=document[_0x5db5c0(0x253)](_0x5db5c0(0x2dc))[_0x5db5c0(0x2a5)]){console[_0x5db5c0(0x219)](_0x5db5c0(0x1e4),parseFloat(document[_0x5db5c0(0x253)](_0x5db5c0(0x28f))['value'])),$(_0x5db5c0(0x1dd))[_0x5db5c0(0x2b8)](''),$(_0x5db5c0(0x1c2))[_0x5db5c0(0x2b8)](_0x5db5c0(0x191)),$(_0x5db5c0(0x285))['attr'](_0x5db5c0(0x238),_0x5db5c0(0x238)),$(_0x5db5c0(0x214))[_0x5db5c0(0x2b8)](''),$('#UserFromCoinAddress')[_0x5db5c0(0x2b8)](''),document[_0x5db5c0(0x253)]('IReciveAmount')[_0x5db5c0(0x2ae)]='',$('#SendBalance')[_0x5db5c0(0x2b8)](_0x5db5c0(0x216)),$(_0x5db5c0(0x149))[_0x5db5c0(0x2b8)](_0x5db5c0(0x216)),console['log']('Send\x20amount:',document[_0x5db5c0(0x253)](_0x5db5c0(0x28f))['value']);var _0x3761a7=_0x5db5c0(0x29e)+UseScan+_0x5db5c0(0x1e7)+tokenIn+'\x27\x20target=\x27_blank\x27>\x20'+'ⓘ'+_0x5db5c0(0x21a),_0x56ff9f=_0x5db5c0(0x29e)+UseScan+'address/'+tokenOut+_0x5db5c0(0x175)+'ⓘ'+'\x20</a>';$('#UserFromCoinAddress')[_0x5db5c0(0x124)](_0x3761a7),$(_0x5db5c0(0x214))[_0x5db5c0(0x124)](_0x56ff9f),console[_0x5db5c0(0x219)](_0x5db5c0(0x194),tokenIn),console['log'](_0x5db5c0(0x1ad),tokenOut);let _0x456a6e=0x1,_0x37e19c='0';TokenContract=await new web3[(_0x5db5c0(0x28e))][(_0x5db5c0(0x1a1))](TokenSmartContractABI,tokenIn,{'from':web3[_0x5db5c0(0x24d)]['selectedAddress']});var _0x24eec6=await TokenContract[_0x5db5c0(0x1b8)][_0x5db5c0(0x27c)]()['call']();console[_0x5db5c0(0x219)](_0x5db5c0(0x1d8),_0x24eec6);var _0x3cd8fe=parseFloat(parseFloat(document[_0x5db5c0(0x253)](_0x5db5c0(0x28f))[_0x5db5c0(0x2ae)])[_0x5db5c0(0x1bb)](_0x24eec6));document[_0x5db5c0(0x253)]('ISendAmount')['value']=_0x3cd8fe;var _0x36f26a=Math[_0x5db5c0(0x163)](0xa,parseInt(_0x24eec6)),_0x5a1d11=await TokenContract[_0x5db5c0(0x1b8)][_0x5db5c0(0x1f6)](web3[_0x5db5c0(0x24d)][_0x5db5c0(0x2e1)])[_0x5db5c0(0x1be)]();_0x5a1d11>0x0?TokenInFinalBalance=(_0x5a1d11/_0x36f26a)[_0x5db5c0(0x20b)]():TokenInFinalBalance='0';TokenInAddress=tokenIn,ChooseSendTokenAddress=TokenInAddress,console['log'](_0x5db5c0(0x2eb),TokenInAddress);if(_0xcccbf8!=MainCoin)console[_0x5db5c0(0x219)]('not\x20MainCoin'),await getApproveStatus(web3[_0x5db5c0(0x24d)][_0x5db5c0(0x2e1)],contractAdress,TokenInAddress),$(_0x5db5c0(0x1b2))[_0x5db5c0(0x2b8)](_0x5db5c0(0x1ea)+TokenInFinalBalance),LeftCoinBalance=TokenInFinalBalance;else{if(_0xcccbf8==MainCoin){$(_0x5db5c0(0x1c3))[_0x5db5c0(0x2ef)]();var _0x499f47=await web3[_0x5db5c0(0x28e)][_0x5db5c0(0x135)](web3[_0x5db5c0(0x24d)]['selectedAddress']),_0x36f26a=Math['pow'](0xa,parseInt(0x12));LeftCoinBalance=_0x499f47/_0x36f26a,$(_0x5db5c0(0x1b2))[_0x5db5c0(0x2b8)](_0x5db5c0(0x148)+LeftCoinBalance),console[_0x5db5c0(0x219)](_0x5db5c0(0x1b0),_0x499f47);}}let _0x2901b9=BigInt(_0x3cd8fe[_0x5db5c0(0x1bb)](_0x24eec6)*_0x36f26a)[_0x5db5c0(0x20b)]();console[_0x5db5c0(0x219)](_0x5db5c0(0x128),_0x2901b9);let _0x5021ff=await myContract[_0x5db5c0(0x1b8)][_0x5db5c0(0x2e7)](_0x2901b9,tokenIn,tokenOut,_0x456a6e)[_0x5db5c0(0x1be)]();console[_0x5db5c0(0x219)](_0x5db5c0(0x2c3),tokenIn),console[_0x5db5c0(0x219)](_0x5db5c0(0x1dc),tokenOut),console[_0x5db5c0(0x219)]('UpdateInfo\x20amountIn:',_0x2901b9),console[_0x5db5c0(0x219)](_0x5db5c0(0x2a1),web3['currentProvider'][_0x5db5c0(0x2e1)]),console['log'](_0x5db5c0(0x29d),_0x5021ff),console[_0x5db5c0(0x219)](_0x5db5c0(0x2ad),UseAdapters),$[_0x5db5c0(0x24f)](UseAdapters,function(_0x1232cc){var _0x5c8b3a=_0x5db5c0;_0x5021ff['adapters'][0x0]==UseAdapters[_0x1232cc][_0x5c8b3a(0x268)]&&(console[_0x5c8b3a(0x219)]('UseAdapters\x20',UseAdapters[_0x1232cc]['name']),$(_0x5c8b3a(0x1a6))['html'](UseAdapters[_0x1232cc][_0x5c8b3a(0x174)]));});var _0x4efd12=_0x5021ff[_0x5db5c0(0x2b2)][0x1];console[_0x5db5c0(0x219)](_0x5db5c0(0x141),_0x4efd12);var _0x4031a2=await new web3[(_0x5db5c0(0x28e))][(_0x5db5c0(0x1a1))](TokenSmartContractABI,tokenOut,{'from':web3[_0x5db5c0(0x24d)][_0x5db5c0(0x2e1)]}),_0x1f7828=await _0x4031a2[_0x5db5c0(0x1b8)]['decimals']()[_0x5db5c0(0x1be)]();console[_0x5db5c0(0x219)](_0x5db5c0(0x2d7),_0x1f7828);var _0x3677b4=Math['pow'](0xa,parseInt(_0x1f7828));console[_0x5db5c0(0x219)]('AddZero2:',_0x3677b4);var _0x366ea7=Number(_0x4efd12/_0x3677b4)['toFixed'](0x12);let _0x47bddd=_0x366ea7;document[_0x5db5c0(0x253)](_0x5db5c0(0x255))[_0x5db5c0(0x2ae)]=_0x47bddd;var _0x1ce0f7=await _0x4031a2[_0x5db5c0(0x1b8)][_0x5db5c0(0x1f6)](web3['currentProvider']['selectedAddress'])[_0x5db5c0(0x1be)]();console[_0x5db5c0(0x219)](_0x5db5c0(0x204),_0x1ce0f7);var _0x57bf3d;_0x1ce0f7>0x0?_0x57bf3d=(_0x1ce0f7/_0x3677b4)['toString']():_0x57bf3d='0';console[_0x5db5c0(0x219)](_0x5db5c0(0x2e4),_0x57bf3d);if(_0xfc880f!=MainCoin)console[_0x5db5c0(0x219)](_0x5db5c0(0x22e)),$(_0x5db5c0(0x149))[_0x5db5c0(0x2b8)](_0x5db5c0(0x1ea)+_0x57bf3d);else{if(_0xfc880f==MainCoin){var _0x499f47=await web3['eth'][_0x5db5c0(0x135)](web3[_0x5db5c0(0x24d)][_0x5db5c0(0x2e1)]),_0x36f26a=Math['pow'](0xa,parseInt(0x12)),_0x4e24ea=_0x499f47/_0x36f26a;$(_0x5db5c0(0x149))[_0x5db5c0(0x2b8)](_0x5db5c0(0x148)+_0x4e24ea),console[_0x5db5c0(0x219)](_0x5db5c0(0x22c),_0x499f47);}}try{await QueryAllAdapters(_0x1f7828,_0x2901b9,tokenIn,tokenOut);}catch(_0x4d6a86){$(_0x5db5c0(0x285))[_0x5db5c0(0x1a3)]('disabled'),console[_0x5db5c0(0x219)](_0x5db5c0(0x2b7),_0x4d6a86);}console[_0x5db5c0(0x219)]('\x20');}else $(_0x5db5c0(0x1c2))[_0x5db5c0(0x2b8)](_0x5db5c0(0x24e)),console[_0x5db5c0(0x219)](_0x5db5c0(0x2a8));$(_0x5db5c0(0x1c2))[_0x5db5c0(0x2b8)](''),$(_0x5db5c0(0x285))[_0x5db5c0(0x1a3)]('disabled'),$(_0x5db5c0(0x1d0))['hide'](),document[_0x5db5c0(0x253)](_0x5db5c0(0x28f))[_0x5db5c0(0x238)]=![],$(_0x5db5c0(0x185))[_0x5db5c0(0x1b9)]();}async function ActiveTokenContract(){var _0x1f2d5f=_0x17f5a1;$(_0x1f2d5f(0x120))[_0x1f2d5f(0x2b8)]('');try{const _0x52fd17=web3[_0x1f2d5f(0x1ce)]['toChecksumAddress'](document[_0x1f2d5f(0x253)]('TokenAddress')[_0x1f2d5f(0x2ae)]);}catch(_0x117d14){console[_0x1f2d5f(0x2a4)](_0x1f2d5f(0x1a4),_0x117d14[_0x1f2d5f(0x2b0)]),TokenContractAddress=document['getElementById'](_0x1f2d5f(0x29c))[_0x1f2d5f(0x2ae)],document[_0x1f2d5f(0x253)]('TokenAddress')[_0x1f2d5f(0x238)]=![],$(_0x1f2d5f(0x1b7))[_0x1f2d5f(0x2b8)](_0x1f2d5f(0x254));return;}$(_0x1f2d5f(0x1b7))[_0x1f2d5f(0x2b8)]('Loading...'),document[_0x1f2d5f(0x253)](_0x1f2d5f(0x29c))[_0x1f2d5f(0x238)]=!![];var _0x3cc540=document[_0x1f2d5f(0x253)]('TokenAddress')[_0x1f2d5f(0x2ae)];TokenContract=await new web3[(_0x1f2d5f(0x28e))]['Contract'](TokenSmartContractABI,_0x3cc540,{'from':web3['currentProvider'][_0x1f2d5f(0x2e1)]}),console[_0x1f2d5f(0x219)](_0x1f2d5f(0x132),TokenContract),console[_0x1f2d5f(0x219)]('Use\x20contract',contractAdress),console[_0x1f2d5f(0x219)](_0x1f2d5f(0x20c),_0x3cc540),getApproveStatus(web3[_0x1f2d5f(0x24d)][_0x1f2d5f(0x2e1)],contractAdress);var _0xccf08c=await balanceOf(web3[_0x1f2d5f(0x24d)][_0x1f2d5f(0x2e1)],TokenContract);}async function QueryAllAdapters(_0x266f6e,_0x891a7a,_0x15140a,_0x1eaaf2){var _0x32665d=_0x17f5a1;console[_0x32665d(0x219)](_0x32665d(0x223),_0x891a7a),console['log']('SendToken:',_0x15140a),console[_0x32665d(0x219)](_0x32665d(0x2c2),_0x1eaaf2);var _0x29cd67=Math[_0x32665d(0x163)](0xa,parseInt(_0x266f6e)),_0x2dc0e2;let _0x21df2e=[],_0xd7f8ba=await myContract[_0x32665d(0x1b8)][_0x32665d(0x157)]()[_0x32665d(0x1be)]();for(let _0x1c7e47=0x0;_0x1c7e47<_0xd7f8ba;_0x1c7e47++){let _0x428ad0=0x0,_0x2b8b2a=await myContract[_0x32665d(0x1b8)][_0x32665d(0x125)](_0x891a7a['toString'](),_0x15140a['toString'](),_0x1eaaf2[_0x32665d(0x20b)](),_0x1c7e47)[_0x32665d(0x1be)](),_0x4d632f=await myContract[_0x32665d(0x1b8)][_0x32665d(0x23f)](_0x1c7e47)[_0x32665d(0x1be)]();console[_0x32665d(0x219)]('adapterAddress:',_0x4d632f),console['log'](_0x32665d(0x239),_0x2b8b2a);var _0x2baded=await toPlainString(_0x2b8b2a/_0x29cd67);_0x2b8b2a>0x0?(_0x2dc0e2=await toPlainString(_0x2b8b2a/_0x29cd67),console['log'](_0x32665d(0x2c0),_0x2baded)):_0x2dc0e2='0';var _0x32008d,_0x21bf21,_0x533748;$[_0x32665d(0x24f)](UseAdapters,function(_0x2094ea){var _0x10a01d=_0x32665d;if(_0x4d632f[_0x10a01d(0x291)]()==UseAdapters[_0x2094ea][_0x10a01d(0x268)][_0x10a01d(0x291)]()){_0x32008d=UseAdapters[_0x2094ea][_0x10a01d(0x174)],console[_0x10a01d(0x219)](_0x10a01d(0x177),UseAdapters[_0x2094ea][_0x10a01d(0x174)]);return;}}),$[_0x32665d(0x24f)](UseTokens,function(_0x97c6e9){var _0x2a107b=_0x32665d;if(_0x15140a==UseTokens[_0x97c6e9][_0x2a107b(0x268)]){_0x21bf21=UseTokens[_0x97c6e9][_0x2a107b(0x2cc)],console[_0x2a107b(0x219)](_0x2a107b(0x138),UseTokens[_0x97c6e9]['symbol']);return;}}),$[_0x32665d(0x24f)](UseTokens,function(_0x1df405){var _0x22445c=_0x32665d;if(_0x1eaaf2==UseTokens[_0x1df405][_0x22445c(0x268)]){_0x533748=UseTokens[_0x1df405][_0x22445c(0x2cc)],console[_0x22445c(0x219)](_0x22445c(0x13f),UseTokens[_0x1df405][_0x22445c(0x2cc)]);return;}});var _0x5900c2=_0x21bf21[_0x32665d(0x20b)]()+'/'+_0x533748[_0x32665d(0x20b)]();console['log'](_0x32665d(0x232),_0x32008d),_0x21df2e['push']([_0x32008d,_0x5900c2,_0x2dc0e2]);}_0x21df2e[_0x32665d(0x29a)](function(_0x59e7d5,_0x11fd14){return _0x11fd14[0x2]-_0x59e7d5[0x2];}),console[_0x32665d(0x219)](_0x32665d(0x11e),_0x21df2e);let _0x566776=await ShowPrices(_0x21df2e);}async function toPlainString(_0x26c981){return(''+ +_0x26c981)['replace'](/(-?)(\d*)\.?(\d*)e([+-]\d+)/,function(_0x3ecebc,_0x7c342f,_0x3bd463,_0x41dd32,_0x244b3b){var _0x4f45fd=_0x5c5f;return _0x244b3b<0x0?_0x7c342f+'0.'+Array(0x1-_0x244b3b-_0x3bd463[_0x4f45fd(0x218)])[_0x4f45fd(0x2d8)](0x0)+_0x3bd463+_0x41dd32:_0x7c342f+_0x3bd463+_0x41dd32+Array(_0x244b3b-_0x41dd32[_0x4f45fd(0x218)]+0x1)['join'](0x0);});}async function ShowPrices(_0x2ef444){var _0x3938bf=_0x17f5a1;$('#RouterTable')[_0x3938bf(0x2b8)]('');let _0x1d8b42='';$['each'](_0x2ef444,function(_0x309881){var _0x5e359a=_0x3938bf;console[_0x5e359a(0x219)]('_PriceArray\x20:\x20',_0x2ef444[_0x309881][0x0]);if(_0x309881==0x0){_0x1d8b42+=_0x5e359a(0x146),_0x1d8b42+=_0x5e359a(0x2c9),_0x1d8b42+=_0x5e359a(0x1c4),_0x1d8b42+=_0x5e359a(0x15b)+_0x2ef444[_0x309881][0x0]+'.png',_0x1d8b42+=_0x5e359a(0x21c),_0x1d8b42+=_0x2ef444[_0x309881][0x0],_0x1d8b42+='</th><td\x20class=\x22text-white\x22\x20>',_0x1d8b42+=_0x2ef444[_0x309881][0x1],_0x1d8b42+=_0x5e359a(0x256);var _0x19463b=_0x2ef444[_0x309881][0x2];_0x19463b=='0'&&(_0x19463b='-'),_0x1d8b42+=_0x19463b,_0x1d8b42+=_0x5e359a(0x140);}else{_0x1d8b42+=_0x5e359a(0x282),_0x1d8b42+='<th\x20scope=\x22row\x22>',_0x1d8b42+='<img\x20width=\x2225\x22\x20height=\x2225\x22\x20src=\x22',_0x1d8b42+=_0x5e359a(0x15b)+_0x2ef444[_0x309881][0x0]+_0x5e359a(0x20a),_0x1d8b42+=_0x5e359a(0x21c),_0x1d8b42+=_0x2ef444[_0x309881][0x0],_0x1d8b42+=_0x5e359a(0x1d7),_0x1d8b42+=_0x2ef444[_0x309881][0x1];var _0x19463b=_0x2ef444[_0x309881][0x2];_0x19463b=='0'&&(_0x19463b='-'),_0x1d8b42+='</td><td>',_0x1d8b42+=_0x19463b,_0x1d8b42+=_0x5e359a(0x140);}}),$(_0x3938bf(0x1dd))[_0x3938bf(0x124)](_0x1d8b42);}function SelectOptionChange(){var _0x45705f=_0x17f5a1;SelectOptionIDOBJ=document[_0x45705f(0x253)](_0x45705f(0x20d)),console[_0x45705f(0x219)](SelectOptionIDOBJ[_0x45705f(0x1fb)][SelectOptionIDOBJ['selectedIndex']][_0x45705f(0x2ae)]),detectEthereumNetwork(SelectOptionIDOBJ['options'][SelectOptionIDOBJ[_0x45705f(0x23b)]][_0x45705f(0x2ae)]);}async function GetEvents(_0x2831d1,_0x1b6ad9){var _0x9dd2ac=_0x17f5a1,_0x2d2c9d;await _0x2831d1[_0x9dd2ac(0x1af)](_0x9dd2ac(0x1c6),{'fromBlock':0x17df81,'toBlock':'latest'})[_0x9dd2ac(0x170)](_0x2ff5f2=>_0x2d2c9d=_0x2ff5f2)[_0x9dd2ac(0x2ce)](_0x36dc5c=>console[_0x9dd2ac(0x2a4)](_0x36dc5c));var _0x444eb8=_0x2d2c9d;console[_0x9dd2ac(0x219)](_0x444eb8),templateString='<table\x20class=table>\x20\x20<tr>\x20\x20\x20'+_0x9dd2ac(0x143)+_0x9dd2ac(0x114)+_0x9dd2ac(0x164)+_0x9dd2ac(0x2bc)+_0x9dd2ac(0x1f8),$['each'](_0x444eb8,function(_0x1e5ad1){var _0x2d6077=_0x9dd2ac;_0x444eb8[_0x1e5ad1]['returnValues'][_0x2d6077(0x12f)]=='1'&&_0x444eb8[_0x1e5ad1][_0x2d6077(0x1d5)][_0x2d6077(0x278)]==_0x1b6ad9&&(templateString+=_0x2d6077(0x274)+_0x444eb8[_0x1e5ad1][_0x2d6077(0x1d5)][_0x2d6077(0x278)]+_0x2d6077(0x256)+web3[_0x2d6077(0x1ce)][_0x2d6077(0x297)](_0x444eb8[_0x1e5ad1][_0x2d6077(0x1d5)][_0x2d6077(0x1d6)],_0x2d6077(0x27f))+'</td><td>'+web3['utils'][_0x2d6077(0x297)](_0x444eb8[_0x1e5ad1]['returnValues'][_0x2d6077(0x2f0)],_0x2d6077(0x27f))+_0x2d6077(0x256)+_0x444eb8[_0x1e5ad1]['returnValues'][_0x2d6077(0x266)]+_0x2d6077(0x28d)+'</tr>');}),templateString+=_0x9dd2ac(0x1c9),$('#EventTable')[_0x9dd2ac(0x124)](templateString);}async function getPairPrice(){var _0x668173=_0x17f5a1,_0x556ab1=ISendobj[_0x668173(0x1fb)][ISendobj[_0x668173(0x23b)]][_0x668173(0x2ae)],_0x2b630f=IWantobj['options'][IWantobj[_0x668173(0x23b)]][_0x668173(0x2ae)];console[_0x668173(0x219)](_0x668173(0x1b3),_0x556ab1),console[_0x668173(0x219)]('IWantValue:',_0x2b630f),FetchURL=_0x668173(0x12d),console[_0x668173(0x219)](_0x668173(0x252),FetchURL),fetch(FetchURL)['then'](_0x3b4a88=>_0x3b4a88[_0x668173(0x281)]())[_0x668173(0x170)](_0x1992cb=>{var _0x41193a=_0x668173,_0x309218=_0x1992cb[_0x41193a(0x152)][_0x41193a(0x1e6)],_0x2b5106=_0x1992cb[_0x41193a(0x1ef)][_0x41193a(0x1e6)],_0x3b91d2=_0x1992cb[_0x41193a(0x231)][_0x41193a(0x1e6)];console[_0x41193a(0x219)](_0x41193a(0x1cf),_0x309218),console[_0x41193a(0x219)]('BNBPrice:',_0x2b5106),console['log'](_0x41193a(0x22f),_0x3b91d2);var _0x520979,_0x2d08c9;if(_0x556ab1=='56')_0x520979=_0x2b5106;else{if(_0x556ab1==_0x41193a(0x286))_0x520979=_0x3b91d2;else _0x556ab1=='1'&&(_0x520979=_0x309218);}if(_0x2b630f=='56')_0x2d08c9=_0x2b5106;else{if(_0x2b630f==_0x41193a(0x286))_0x2d08c9=_0x3b91d2;else _0x2b630f=='1'&&(_0x2d08c9=_0x309218);}return console[_0x41193a(0x219)](_0x41193a(0x298),_0x520979),console[_0x41193a(0x219)]('IWantPrice:',_0x2d08c9),PriceResult=_0x520979/_0x2d08c9,console['log'](_0x41193a(0x1e5),PriceResult['toFixed'](0x12)),$(_0x41193a(0x267))[_0x41193a(0x2b8)](PriceResult['toFixed'](0x12)),ISendInputChange(),PriceResult;});}async function SendMultiToken(){var _0x172a55=_0x17f5a1;console[_0x172a55(0x219)](_0x172a55(0x1b1));if(CurrentTokenDecimals==0x0&&document[_0x172a55(0x253)]('SendTokenRadioID')[_0x172a55(0x118)]){$('#Tips')[_0x172a55(0x2b8)](_0x172a55(0x203)),$(_0x172a55(0x1fe))[_0x172a55(0x2ef)]();return;}var _0x4d6778=document[_0x172a55(0x253)]('fileUpload');console['log'](_0x172a55(0x221),_0x4d6778);if(typeof FileReader===_0x172a55(0x19d)){$(_0x172a55(0x1c2))[_0x172a55(0x2b8)](_0x172a55(0x2ee)),$(_0x172a55(0x1d9))['html'](''),$(_0x172a55(0x1fe))[_0x172a55(0x2ef)]();return;}if(document[_0x172a55(0x253)]('SendSameAmountRadio')[_0x172a55(0x118)]&&(document[_0x172a55(0x253)](_0x172a55(0x26f))[_0x172a55(0x2ae)]==''||document[_0x172a55(0x253)](_0x172a55(0x225))['value']=='')){$('#Tips')[_0x172a55(0x2b8)](_0x172a55(0x16d)),$('#loader1')[_0x172a55(0x2ef)]();return;}console[_0x172a55(0x219)](_0x172a55(0x11b),document['getElementById'](_0x172a55(0x26f))[_0x172a55(0x2ae)]),console[_0x172a55(0x219)](_0x172a55(0x288),CurrentTokenDecimals),console[_0x172a55(0x219)](_0x172a55(0x205),contractAdress);var _0x5426da=[],_0x42f6e7=[],_0x1a84bb=0x0;if(document[_0x172a55(0x253)](_0x172a55(0x200))[_0x172a55(0x118)]){var _0x52c1e0=$(_0x172a55(0x126))[_0x172a55(0x1e9)]()[_0x172a55(0x23e)](/\n/);_0x5426da=[],_0x42f6e7=[];for(var _0x1cb776=0x0;_0x1cb776<_0x52c1e0[_0x172a55(0x218)];_0x1cb776++){/\S/[_0x172a55(0x243)](_0x52c1e0[_0x1cb776])&&(_0x5426da['push']($[_0x172a55(0x1d1)](_0x52c1e0[_0x1cb776])),_0x42f6e7[_0x172a55(0x272)](BigInt(document['getElementById']('MultiSendAmount')['value']*Math[_0x172a55(0x163)](0xa,CurrentTokenDecimals[_0x172a55(0x20b)]()))[_0x172a55(0x20b)]()),_0x1a84bb=BigInt(_0x1a84bb)+BigInt(document[_0x172a55(0x253)](_0x172a55(0x26f))[_0x172a55(0x2ae)]*Math[_0x172a55(0x163)](0xa,CurrentTokenDecimals[_0x172a55(0x20b)]())),SendFee=(BigInt(_0x1a84bb)+BigInt(ContractFee)+BigInt(web3[_0x172a55(0x1ce)][_0x172a55(0x1f3)](BeeFee[_0x172a55(0x20b)]())))[_0x172a55(0x20b)]());}console['log'](_0x172a55(0x18f),_0x1a84bb);}else{console[_0x172a55(0x219)]('start\x20read\x20csv...'),_0x5426da=[],_0x42f6e7=[];let _0x43f2fa=await ReadCSVtoArray();console[_0x172a55(0x219)](_0x172a55(0x245),_0x43f2fa);if(typeof _0x43f2fa==_0x172a55(0x19d)){console[_0x172a55(0x219)]('read\x20csv\x20Error:'),$(_0x172a55(0x1c2))[_0x172a55(0x2b8)]('Please\x20choose\x20a\x20valid\x20CSV\x20file,csv\x20file\x20name\x20are\x20English\x20letters\x20only,like:\x20abc123.csv'),$(_0x172a55(0x1d9))['html'](''),$(_0x172a55(0x1fe))[_0x172a55(0x2ef)]();return;}else _0x5426da=_0x43f2fa[_0x172a55(0x2c8)],_0x42f6e7=_0x43f2fa['_AmountArray'],console[_0x172a55(0x219)](_0x172a55(0x24a),CSVEtherTotal),console[_0x172a55(0x219)](_0x172a55(0x284),SendFee);}console['log'](_0x172a55(0x2e8),_0x5426da),console['log']('_AmountArray:',_0x42f6e7),console[_0x172a55(0x219)]('contractAdress:',contractAdress),_Contract=await new web3[(_0x172a55(0x28e))][(_0x172a55(0x1a1))](SmartContractABI,contractAdress,{'from':web3[_0x172a55(0x24d)][_0x172a55(0x2e1)]});var _0x56ad2d='';document[_0x172a55(0x253)](_0x172a55(0x1e3))[_0x172a55(0x118)]?_0x56ad2d=document[_0x172a55(0x253)]('TokenAddress')[_0x172a55(0x2ae)]:_0x56ad2d=_0x172a55(0x244);var _0x418b8b=0x1d1a94a2001;console[_0x172a55(0x219)](_0x172a55(0x251),FeeReciever);var _0x3606fb=await web3[_0x172a55(0x28e)][_0x172a55(0x2b5)]();console[_0x172a55(0x219)](_0x172a55(0x17f)+_0x3606fb);var _0x106abe,_0x471e96=web3[_0x172a55(0x1ce)][_0x172a55(0x1f3)](BeeFee[_0x172a55(0x20b)]());console[_0x172a55(0x219)](_0x172a55(0x28a),BeeFee),SendFee=SendFee[_0x172a55(0x20b)](),console['log']('ReferrerFee\x20wei:',_0x471e96),console[_0x172a55(0x219)](_0x172a55(0x1cd),_0x56ad2d),console[_0x172a55(0x219)]('totalFee:',SendFee),await _Contract[_0x172a55(0x1b8)][_0x172a55(0x129)](_0x5426da,_0x42f6e7,_0x56ad2d,FeeReciever,_0x471e96)[_0x172a55(0x2cb)]({'from':web3[_0x172a55(0x24d)][_0x172a55(0x2e1)],'value':SendFee})[_0x172a55(0x170)](function(_0x36ff8a){_0x106abe=_0x36ff8a;})['catch'](function(_0x5f2b9f){var _0x3748e5=_0x172a55;console['log'](_0x3748e5(0x2f1),_0x5f2b9f),$(_0x3748e5(0x1fe))[_0x3748e5(0x2ef)]();}),console['log'](_0x172a55(0x14b)+_0x106abe),document['getElementById'](_0x172a55(0x1a5))['checked']?(console[_0x172a55(0x219)](_0x172a55(0x187)),await _Contract[_0x172a55(0x1b8)][_0x172a55(0x129)](_0x5426da,_0x42f6e7,_0x56ad2d,FeeReciever,_0x471e96)[_0x172a55(0x1e2)]({'from':web3[_0x172a55(0x24d)][_0x172a55(0x2e1)],'gas':_0x106abe,'gasPrice':_0x3606fb,'value':SendFee},function(_0x18035a,_0x481ff0){var _0xce430e=_0x172a55;!_0x18035a?console[_0xce430e(0x219)](_0xce430e(0x15d),_0x481ff0):(console[_0xce430e(0x219)](_0xce430e(0x136)),_0x18035a[_0xce430e(0x2b0)][_0xce430e(0x213)](_0xce430e(0x15f))&&(console[_0xce430e(0x219)](_0xce430e(0x15f)),$(_0xce430e(0x1fe))[_0xce430e(0x2ef)]()));})['once'](_0x172a55(0x1aa),function(_0xd806ae){var _0x5d9529=_0x172a55;console[_0x5d9529(0x219)]('hash:',_0xd806ae);var _0x30d2d3=BlockchainScan+_0xd806ae;$('#transactionHashLabel')['html'](_0x5d9529(0x19b)+_0x5d9529(0x17d)+_0x30d2d3+_0x5d9529(0x1de)+_0xd806ae+_0x5d9529(0x208));})[_0x172a55(0x16f)]('receipt',function(_0x3423a1){var _0x2e3c7a=_0x172a55;console[_0x2e3c7a(0x219)](_0x2e3c7a(0x240),_0x3423a1),document['getElementById'](_0x2e3c7a(0x2c4))[_0x2e3c7a(0x2b9)][_0x2e3c7a(0x262)]=_0x2e3c7a(0x201),$(_0x2e3c7a(0x1fe))['hide']();})):(console[_0x172a55(0x219)](_0x172a55(0x112)),await _Contract[_0x172a55(0x1b8)][_0x172a55(0x129)](_0x5426da,_0x42f6e7,_0x56ad2d,FeeReciever,_0x471e96)[_0x172a55(0x1e2)]({'from':web3[_0x172a55(0x24d)][_0x172a55(0x2e1)],'value':SendFee},function(_0x45bd67,_0x2deb7e){var _0x248aa8=_0x172a55;!_0x45bd67?console[_0x248aa8(0x219)](_0x248aa8(0x15d),_0x2deb7e):(console[_0x248aa8(0x219)](_0x248aa8(0x136)),_0x45bd67[_0x248aa8(0x2b0)][_0x248aa8(0x213)](_0x248aa8(0x15f))&&(console[_0x248aa8(0x219)]('User\x20denied\x20transaction\x20signature'),$(_0x248aa8(0x1fe))['hide']()));})['once']('transactionHash',function(_0x18b6b2){var _0x181150=_0x172a55;console[_0x181150(0x219)](_0x181150(0x1fa),_0x18b6b2);var _0x8695ca=BlockchainScan+_0x18b6b2;$(_0x181150(0x120))[_0x181150(0x2b8)](_0x181150(0x19b)+_0x181150(0x17d)+_0x8695ca+'\x20target=\x22_blank\x22>'+_0x18b6b2+'</a>');})[_0x172a55(0x16f)](_0x172a55(0x168),function(_0x52a123){var _0x45e559=_0x172a55;console[_0x45e559(0x219)](_0x45e559(0x240),_0x52a123),document[_0x45e559(0x253)](_0x45e559(0x2c4))[_0x45e559(0x2b9)][_0x45e559(0x262)]=_0x45e559(0x201),$('#loader1')[_0x45e559(0x2ef)]();}));}async function GetEndTime(){var _0x3be352=_0x17f5a1;await myContract['methods'][_0x3be352(0x2a0)]()[_0x3be352(0x1be)]({'from':web3[_0x3be352(0x24d)][_0x3be352(0x2e1)]},function(_0x3251ca,_0x3d8d67){var _0x481b5b=_0x3be352;if(!_0x3251ca){console[_0x481b5b(0x219)](_0x481b5b(0x1df),_0x3d8d67);var _0x50a627=_0x3d8d67+_0x481b5b(0x261);TimeCount(_0x50a627);}else console[_0x481b5b(0x219)](_0x481b5b(0x27b),_0x3251ca);});}async function GetRewardPool(){var _0xcd93cc=_0x17f5a1;await myContract[_0xcd93cc(0x1b8)]['RewardPool']()[_0xcd93cc(0x1be)]({'from':web3[_0xcd93cc(0x24d)][_0xcd93cc(0x2e1)]},function(_0x586671,_0x7805e2){var _0x1e4679=_0xcd93cc;!_0x586671?(console[_0x1e4679(0x219)](_0x1e4679(0x1eb),_0x7805e2),document['getElementById'](_0x1e4679(0x165))[_0x1e4679(0x2a5)]=_0x1e4679(0x2dd)+web3[_0x1e4679(0x1ce)]['fromWei'](_0x7805e2,'ether')):console[_0x1e4679(0x219)](_0x1e4679(0x1a9),_0x586671);});}function UserChooseFromItem(){var _0x2b511f=_0x17f5a1;console[_0x2b511f(0x219)](_0x2b511f(0x21e)),$('#SelectISend')['hide']();}function UserChooseToItem(){var _0x1b450c=_0x17f5a1;console[_0x1b450c(0x219)]('UserChooseToItem'),$('#SelectIWant')[_0x1b450c(0x2ef)]();}function ShowISendFilter(){var _0x3a8c3c=_0x17f5a1;$(_0x3a8c3c(0x1b6))[_0x3a8c3c(0x1b9)]();}function ShowIWantFilter(){var _0x1e424d=_0x17f5a1;$(_0x1e424d(0x11a))[_0x1e424d(0x1b9)]();}function _0x5c5f(_0x2d098c,_0x43399d){var _0x1c9942=_0x1c99();return _0x5c5f=function(_0x5c5fc5,_0x457f71){_0x5c5fc5=_0x5c5fc5-0x112;var _0x28f68d=_0x1c9942[_0x5c5fc5];return _0x28f68d;},_0x5c5f(_0x2d098c,_0x43399d);}function filterFunction(){var _0x49a5f8=_0x17f5a1,_0x3a064e,_0x1ee526,_0x3fc580,_0x4846df,_0x15b867,_0x5388bc;_0x3a064e=document[_0x49a5f8(0x253)]('FromInput'),_0x1ee526=_0x3a064e['value']['toUpperCase'](),div=document['getElementById'](_0x49a5f8(0x1ae)),_0x15b867=div[_0x49a5f8(0x193)]('a');for(_0x5388bc=0x0;_0x5388bc<_0x15b867[_0x49a5f8(0x218)];_0x5388bc++){txtValue=_0x15b867[_0x5388bc]['textContent']||_0x15b867[_0x5388bc][_0x49a5f8(0x181)],txtValue[_0x49a5f8(0x154)]()[_0x49a5f8(0x2d6)](_0x1ee526)>-0x1?_0x15b867[_0x5388bc][_0x49a5f8(0x2b9)]['display']='':_0x15b867[_0x5388bc][_0x49a5f8(0x2b9)][_0x49a5f8(0x17e)]=_0x49a5f8(0x290);}}function ToFilterFunction(){var _0xc2542c=_0x17f5a1,_0x525d38,_0x535a69,_0x2b30ef,_0x5ab0c0,_0x3690cc,_0x364402;_0x525d38=document[_0xc2542c(0x253)](_0xc2542c(0x2d5)),_0x535a69=_0x525d38[_0xc2542c(0x2ae)][_0xc2542c(0x154)](),div=document[_0xc2542c(0x253)](_0xc2542c(0x207)),_0x3690cc=div[_0xc2542c(0x193)]('a');for(_0x364402=0x0;_0x364402<_0x3690cc['length'];_0x364402++){txtValue=_0x3690cc[_0x364402]['textContent']||_0x3690cc[_0x364402][_0xc2542c(0x181)],txtValue[_0xc2542c(0x154)]()['indexOf'](_0x535a69)>-0x1?_0x3690cc[_0x364402]['style'][_0xc2542c(0x17e)]='':_0x3690cc[_0x364402][_0xc2542c(0x2b9)]['display']=_0xc2542c(0x290);}}async function AddSelect(){var _0x106bfd=_0x17f5a1,_0x428dc2=document[_0x106bfd(0x253)]('SelectISend'),_0x3a2efb;_0x428dc2!==null&&$['each'](UseTokens,function(_0x3eebe6){var _0x5db00e=_0x106bfd;console[_0x5db00e(0x219)]('UseTokens\x20:\x20',UseTokens[_0x3eebe6][0x0]);var _0x5036e7=document[_0x5db00e(0x212)](_0x5db00e(0x26e));_0x5036e7['innerHTML']=UseTokens[_0x3eebe6][_0x5db00e(0x2cc)],_0x5036e7[_0x5db00e(0x2ae)]=UseTokens[_0x3eebe6]['address'],_0x428dc2['appendChild'](_0x5036e7);});var _0x470722=document[_0x106bfd(0x253)](_0x106bfd(0x207));_0x470722!==null&&$[_0x106bfd(0x24f)](UseTokens,function(_0x40f32a){var _0x15cbd1=_0x106bfd;console[_0x15cbd1(0x219)](_0x15cbd1(0x116),UseTokens[_0x40f32a][0x0]);var _0x4f9bb6=document[_0x15cbd1(0x212)](_0x15cbd1(0x26e));_0x4f9bb6[_0x15cbd1(0x2a5)]=UseTokens[_0x40f32a][_0x15cbd1(0x2cc)],_0x4f9bb6[_0x15cbd1(0x2ae)]=UseTokens[_0x40f32a][_0x15cbd1(0x268)],_0x470722[_0x15cbd1(0x2ab)](_0x4f9bb6);}),document[_0x106bfd(0x253)](_0x106bfd(0x207))[_0x106bfd(0x2ae)]=UseTokens[0x3][_0x106bfd(0x268)];}function addZero(_0x536563){var _0xadfb3f=_0x536563+'000000000000000000';return _0xadfb3f;}function component(_0x46f2ed,_0x4a9554){return Math['floor'](_0x46f2ed/_0x4a9554);}function TimeCount(_0x17a51c){var _0x3d60b6=setInterval(function(){var _0x382465=_0x5c5f,_0x3a270d=new Date()[_0x382465(0x15a)](),_0xffe84f=_0x17a51c-_0x3a270d,_0x14b7c6=Math['floor'](_0xffe84f/(0x3e8*0x3c*0x3c*0x18)),_0x3b2275=Math['floor'](_0xffe84f%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c)),_0x597ac7=Math[_0x382465(0x287)](_0xffe84f%(0x3e8*0x3c*0x3c)/(0x3e8*0x3c)),_0xdffe23=Math['floor'](_0xffe84f%(0x3e8*0x3c)/0x3e8);$('#days')[_0x382465(0x2b8)](_0x14b7c6+_0x382465(0x198)),$(_0x382465(0x211))['html'](_0x3b2275+_0x382465(0x2ac)),$(_0x382465(0x1a0))['html'](_0x597ac7+_0x382465(0x2d1)),$(_0x382465(0x296))['html'](_0xdffe23+_0x382465(0x196)),_0xffe84f<0x0&&(clearInterval(_0x3d60b6),$('#days')['html']('0'+_0x382465(0x198)),$(_0x382465(0x211))[_0x382465(0x2b8)]('0'+_0x382465(0x2ac)),$(_0x382465(0x1a0))[_0x382465(0x2b8)]('0'+_0x382465(0x2d1)),$('#seconds')[_0x382465(0x2b8)]('0'+'<span>Seconds</span>'),$(_0x382465(0x2bd))['show']());},0x3e8);}function ChooseBlockchain(_0x1c0c47){var _0xe06b8f=_0x17f5a1;console[_0xe06b8f(0x219)](_0xe06b8f(0x19a),_0x1c0c47),detectEthereumNetwork(_0x1c0c47);}async function ChooseFromToken(_0x56e0ef,_0xc66186){var _0xb98b80=_0x17f5a1;tokenIn=_0xc66186;let _0x452061=_0xb98b80(0x139)+_0x56e0ef+_0xb98b80(0x20a),_0x998945='img/icon/default.png';checkIfImageExists(_0x452061,_0x473f24=>{if(_0x473f24)_0x998945=_0x452061;else{}}),console[_0xb98b80(0x219)]('tokenIn:',tokenIn),console[_0xb98b80(0x219)](_0xb98b80(0x236),_0x56e0ef),document[_0xb98b80(0x253)]('FromImage')['src']=_0x998945,document[_0xb98b80(0x253)](_0xb98b80(0x2cf))[_0xb98b80(0x2a5)]=_0x56e0ef+'⌄',console[_0xb98b80(0x219)](_0xb98b80(0x19a),_0x56e0ef),await UpdateInfo();}async function ChooseToToken(_0x5486fb,_0x36201a){var _0x1e616d=_0x17f5a1;tokenOut=_0x36201a;let _0x350142='img/icon/'+_0x5486fb+_0x1e616d(0x20a),_0x4d1864='img/icon/default.png';checkIfImageExists(_0x350142,_0x939813=>{if(_0x939813)_0x4d1864=_0x350142;else{}}),console[_0x1e616d(0x219)](_0x1e616d(0x1dc),tokenOut),console[_0x1e616d(0x219)](_0x1e616d(0x2c1),_0x5486fb),document[_0x1e616d(0x253)]('ToImage')['src']=_0x4d1864,document[_0x1e616d(0x253)]('ToButton')[_0x1e616d(0x2a5)]=_0x5486fb+'⌄',console[_0x1e616d(0x219)]('nameID:',_0x5486fb),await UpdateInfo();}async function SwitchToken(){var _0xea8689=_0x17f5a1;let _0x466fbc=document[_0xea8689(0x253)](_0xea8689(0x275))[_0xea8689(0x127)],_0x583856=document[_0xea8689(0x253)](_0xea8689(0x2dc))[_0xea8689(0x2a5)],_0x5e4cb4=tokenIn;tokenIn=tokenOut,tokenOut=_0x5e4cb4,console[_0xea8689(0x219)](_0xea8689(0x133),_0x466fbc),console[_0xea8689(0x219)]('TempText:',_0x583856),document[_0xea8689(0x253)]('ToImage')[_0xea8689(0x127)]=document[_0xea8689(0x253)]('FromImage')[_0xea8689(0x127)],document[_0xea8689(0x253)]('ToButton')['innerHTML']=document[_0xea8689(0x253)](_0xea8689(0x2cf))[_0xea8689(0x2a5)],document[_0xea8689(0x253)](_0xea8689(0x189))['src']=_0x466fbc,document[_0xea8689(0x253)](_0xea8689(0x2cf))[_0xea8689(0x2a5)]=_0x583856,console[_0xea8689(0x219)](_0xea8689(0x1a2),tokenIn),console[_0xea8689(0x219)](_0xea8689(0x2d0),tokenOut),await UpdateInfo();}async function detectEthereumNetwork(_0x585d47){var _0xe6307=_0x17f5a1,_0x17c127={'chainName':_0xe6307(0x210),'chainxName':'BNB','symbol':_0xe6307(0x23d),'rpcUrls':'https://bsc-dataseed1.binance.org/','blockExplorerUrls':_0xe6307(0x171)},_0xb79a02={'chainName':_0xe6307(0x115),'chainxName':_0xe6307(0x17c),'symbol':_0xe6307(0x19c),'rpcUrls':_0xe6307(0x178),'blockExplorerUrls':'https://polygonscan.com'},_0x2ad40b={'chainName':_0xe6307(0x259),'chainxName':'HT','symbol':'HT','rpcUrls':_0xe6307(0x293),'blockExplorerUrls':'https://hecoinfo.com'},_0x43627c={'chainName':_0xe6307(0x217),'chainxName':_0xe6307(0x1ec),'symbol':_0xe6307(0x1ec),'rpcUrls':_0xe6307(0x247),'blockExplorerUrls':_0xe6307(0x2cd)},_0x1205f2=_0x585d47,_0x449604=await web3[_0xe6307(0x28e)][_0xe6307(0x289)][_0xe6307(0x2a2)]();console[_0xe6307(0x219)](_0xe6307(0x246),_0x449604);var _0x5400b8;if(_0x1205f2==0x38)_0x5400b8=_0x17c127;else{if(_0x1205f2==0x80)_0x5400b8=_0x2ad40b;else{if(_0x1205f2==0x89)_0x5400b8=_0xb79a02;else _0x1205f2==0xfa&&(_0x5400b8=_0x43627c);}}if(_0x449604==_0x1205f2&&_0x449604!=0x13881)return console[_0xe6307(0x219)]('current\x20network\x20equl\x20Select\x20network\x20id.\x20does\x27nt\x20need\x20switch\x20metamask'),!![];try{$(_0xe6307(0x1c2))[_0xe6307(0x2b8)](_0xe6307(0x142)),await window[_0xe6307(0x152)][_0xe6307(0x242)]({'method':_0xe6307(0x206),'params':[{'chainId':'0x'+decimalToHexString(parseInt(_0x585d47))}]}),window['location'][_0xe6307(0x20f)]();}catch(_0x571ded){console[_0xe6307(0x219)]('error.code',_0x571ded['code']);if(_0x571ded[_0xe6307(0x197)]==0x1326)try{console[_0xe6307(0x219)](_0xe6307(0x1c8),_0x571ded[_0xe6307(0x197)]),await window[_0xe6307(0x152)][_0xe6307(0x242)]({'method':_0xe6307(0x21f),'params':[{'chainId':'0x'+decimalToHexString(parseInt(_0x585d47)),'chainName':_0x5400b8[_0xe6307(0x25b)],'nativeCurrency':{'name':_0x5400b8['chainxName'],'symbol':_0x5400b8[_0xe6307(0x2cc)],'decimals':0x12},'rpcUrls':[_0x5400b8['rpcUrls']],'blockExplorerUrls':[_0x5400b8[_0xe6307(0x227)]]}]});return![];window[_0xe6307(0x173)]['reload']();}catch(_0x3a6e3f){if(_0x3a6e3f[_0xe6307(0x197)]==0xfa1)return console[_0xe6307(0x219)]('User\x20reject\x20.',_0x3a6e3f[_0xe6307(0x2b0)]),$('#loader1')[_0xe6307(0x2ef)](),$('#Tips')[_0xe6307(0x2b8)](''),![];}else{if(_0x571ded['code']==0xfa1)return console[_0xe6307(0x219)](_0xe6307(0x14c),_0x571ded[_0xe6307(0x2b0)]),$('#loader1')['hide'](),$('#Tips')[_0xe6307(0x2b8)](''),![];}}$(_0xe6307(0x1c2))[_0xe6307(0x2b8)]('');}function decimalToHexString(_0x371e61){var _0x2f499e=_0x17f5a1;return _0x371e61<0x0&&(_0x371e61=0xffffffff+_0x371e61+0x1),_0x371e61[_0x2f499e(0x20b)](0x10)['toUpperCase']();}function ISendInputChange(){var _0x465544=_0x17f5a1;parseFloat(document[_0x465544(0x253)](_0x465544(0x14d))[_0x465544(0x2ae)])>0x2&&(document[_0x465544(0x253)]('IWantInput')['value']=parseInt(document[_0x465544(0x253)](_0x465544(0x14d))[_0x465544(0x2ae)]),document['getElementById'](_0x465544(0x14d))[_0x465544(0x2ae)]=parseInt(document[_0x465544(0x253)](_0x465544(0x14d))['value']),$('#SendUSDDescription')[_0x465544(0x2b8)](_0x465544(0x11d)+(parseInt(document[_0x465544(0x253)](_0x465544(0x14d))[_0x465544(0x2ae)])+0x1)+'\x20USDT'),console['log']('ISendInputChange'),console[_0x465544(0x219)](_0x465544(0x1ba),polygonLimit),console[_0x465544(0x219)]('binanceLimit:',binanceLimit),console['log'](_0x465544(0x18d),fantomLimit));}async function approveThis(){var _0x2eb7f7=_0x17f5a1;$('#loader2')[_0x2eb7f7(0x2ef)]();try{const _0x3ce7f6=web3[_0x2eb7f7(0x1ce)][_0x2eb7f7(0x1cc)](tokenIn);}catch(_0xd78de8){console[_0x2eb7f7(0x2a4)](_0x2eb7f7(0x1db),_0xd78de8[_0x2eb7f7(0x2b0)]),TokenContractAddress=tokenIn;return;}$('#loader2')[_0x2eb7f7(0x1b9)](),TokenContract=await new web3[(_0x2eb7f7(0x28e))]['Contract'](TokenSmartContractABI,tokenIn,{'from':web3[_0x2eb7f7(0x24d)][_0x2eb7f7(0x2e1)]});const _0x1f7681=await TokenContract[_0x2eb7f7(0x1b8)][_0x2eb7f7(0x299)](contractAdress,_0x2eb7f7(0x1fc))[_0x2eb7f7(0x1e2)]({'from':web3[_0x2eb7f7(0x24d)][_0x2eb7f7(0x2e1)]},function(_0x29a8ab,_0x247c4c){var _0x50a5db=_0x2eb7f7;!_0x29a8ab?console[_0x50a5db(0x219)](_0x50a5db(0x160)):($(_0x50a5db(0x1d0))[_0x50a5db(0x2ef)](),console[_0x50a5db(0x219)](_0x50a5db(0x229)));})[_0x2eb7f7(0x16f)](_0x2eb7f7(0x1aa),function(_0x212f31){var _0x5ce3eb=_0x2eb7f7;console[_0x5ce3eb(0x219)](_0x5ce3eb(0x22a),_0x212f31);})['once']('receipt',function(_0x2d4817){var _0x1a59c7=_0x2eb7f7;console[_0x1a59c7(0x219)](_0x1a59c7(0x1c1),_0x2d4817),$('#approveThisButton')['hide'](),$(_0x1a59c7(0x1d0))[_0x1a59c7(0x2ef)]();});}async function getApproveStatus(_0x1fb61a,_0x12e19d){var _0x122ee5=_0x17f5a1;console[_0x122ee5(0x219)](_0x122ee5(0x1c0)),await TokenContract['methods'][_0x122ee5(0x119)](_0x1fb61a,_0x12e19d)[_0x122ee5(0x1be)]({'from':web3[_0x122ee5(0x24d)][_0x122ee5(0x2e1)]},function(_0x439bd3,_0x5608dd){var _0x2147e1=_0x122ee5;!_0x439bd3&&(console[_0x2147e1(0x219)](_0x2147e1(0x130),_0x5608dd),_0x5608dd>0x0?($(_0x2147e1(0x1c3))[_0x2147e1(0x2ef)](),document[_0x2147e1(0x253)](_0x2147e1(0x29c))[_0x2147e1(0x238)]=![],console['log']('Already\x20approved!')):($(_0x2147e1(0x1c3))[_0x2147e1(0x1b9)](),console[_0x2147e1(0x219)](_0x2147e1(0x280))));});}async function LoadMainCoinBalance(){var _0x141219=_0x17f5a1,_0x52bcbf=await web3[_0x141219(0x28e)][_0x141219(0x135)](web3[_0x141219(0x24d)]['selectedAddress']),_0x58ef36=Math[_0x141219(0x163)](0xa,parseInt(0x12));LeftCoinBalance=_0x52bcbf/_0x58ef36,$(_0x141219(0x1b2))[_0x141219(0x2b8)](_0x141219(0x148)+LeftCoinBalance),document[_0x141219(0x253)](_0x141219(0x28f))[_0x141219(0x2ae)]=LeftCoinBalance,console[_0x141219(0x219)](_0x141219(0x1b0),_0x52bcbf);}async function ISendChange(){var _0x50bd89=_0x17f5a1;console[_0x50bd89(0x219)](_0x50bd89(0x29f));}async function balanceOf(_0x4f2e93,_0x54dfae){var _0x46da62=_0x17f5a1;$(_0x46da62(0x1b7))[_0x46da62(0x2b8)](_0x46da62(0x216)),await _0x54dfae['methods']['balanceOf'](_0x4f2e93)['call']({'from':web3[_0x46da62(0x24d)][_0x46da62(0x2e1)]},function(_0x138740,_0x1f2e22){var _0x480f5e=_0x46da62;!_0x138740?(console[_0x480f5e(0x219)](_0x480f5e(0x176),_0x1f2e22),_0x54dfae['methods']['decimals']()[_0x480f5e(0x1be)](function(_0xc6c705,_0x51d507){var _0x1e6e85=_0x480f5e,_0xe9cc8b=parseInt(_0x1f2e22);console[_0x1e6e85(0x219)](_0x1e6e85(0x2db),_0xe9cc8b);var _0x405fa9=Math[_0x1e6e85(0x163)](0xa,parseInt(_0x51d507)),_0xa5d79b=_0xe9cc8b/_0x405fa9;console[_0x1e6e85(0x219)](_0x1e6e85(0x153),_0xa5d79b[_0x1e6e85(0x241)]('fullwide',{'useGrouping':![]})),$(_0x1e6e85(0x1b7))[_0x1e6e85(0x2b8)](_0x1e6e85(0x148)+_0xa5d79b[_0x1e6e85(0x241)](_0x1e6e85(0x16a),{'useGrouping':![]})),CurrentTokenDecimals=BigInt(_0x51d507),console[_0x1e6e85(0x219)](_0x1e6e85(0x1d8),_0x51d507),console[_0x1e6e85(0x219)]('decimal\x20*\x2010:',_0x405fa9),console[_0x1e6e85(0x219)](_0x1e6e85(0x2db),BigInt(_0xe9cc8b));})):($(_0x480f5e(0x1b7))['html'](_0x480f5e(0x220)),document[_0x480f5e(0x253)](_0x480f5e(0x29c))['disabled']=![],console[_0x480f5e(0x219)]('balanceOf\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract'));});}async function SwapNow(){var _0x6b3c81=_0x17f5a1;$(_0x6b3c81(0x1c2))[_0x6b3c81(0x2b8)]('');let _0x25711f=document[_0x6b3c81(0x253)]('FromButton')[_0x6b3c81(0x2a5)][_0x6b3c81(0x222)]('⌄',''),_0x49aaec=document['getElementById']('ToButton')['innerHTML'][_0x6b3c81(0x222)]('⌄','');document[_0x6b3c81(0x253)]('Tips')[_0x6b3c81(0x2b9)][_0x6b3c81(0x262)]=_0x6b3c81(0x25c);if(LeftCoinBalance>document[_0x6b3c81(0x253)](_0x6b3c81(0x28f))[_0x6b3c81(0x2ae)]&&document[_0x6b3c81(0x253)](_0x6b3c81(0x1ae))[_0x6b3c81(0x2a5)]!=document[_0x6b3c81(0x253)](_0x6b3c81(0x207))[_0x6b3c81(0x2a5)]){$('#loader1')[_0x6b3c81(0x1b9)](),console[_0x6b3c81(0x219)](_0x6b3c81(0x263),document[_0x6b3c81(0x253)]('ISendAmount')[_0x6b3c81(0x2ae)]),ISendobj=document[_0x6b3c81(0x253)](_0x6b3c81(0x1ae)),IWantobj=document['getElementById']('SelectIWant'),console[_0x6b3c81(0x219)]('SelectISend:',tokenIn),console['log'](_0x6b3c81(0x1ad),tokenOut);let _0x44e4d7=0x1,_0x598272='0';var _0x166ab4=await new web3[(_0x6b3c81(0x28e))][(_0x6b3c81(0x1a1))](TokenSmartContractABI,tokenIn,{'from':web3[_0x6b3c81(0x24d)][_0x6b3c81(0x2e1)]}),_0x301351=await _0x166ab4[_0x6b3c81(0x1b8)][_0x6b3c81(0x27c)]()[_0x6b3c81(0x1be)]();console['log']('TokenDecimals:',_0x301351);var _0x490673=parseFloat(document[_0x6b3c81(0x253)](_0x6b3c81(0x28f))[_0x6b3c81(0x2ae)]),_0x3f7f73=Math['pow'](0xa,parseInt(_0x301351));let _0x2d07fb=BigInt(_0x490673*_0x3f7f73)[_0x6b3c81(0x20b)]();console[_0x6b3c81(0x219)](_0x6b3c81(0x156),_0x2d07fb);let _0x1ad5bc=await myContract[_0x6b3c81(0x1b8)][_0x6b3c81(0x2e7)](_0x2d07fb,tokenIn,tokenOut,_0x44e4d7)['call']();console['log'](_0x6b3c81(0x2c3),tokenIn),console[_0x6b3c81(0x219)]('SwapNow\x20web3.currentProvider.selectedAddress:',web3[_0x6b3c81(0x24d)][_0x6b3c81(0x2e1)]),console[_0x6b3c81(0x219)]('findBestPathResult:',_0x1ad5bc);if(_0x25711f==MainCoin)await SwapNoSplitFromMainCoin(_0x1ad5bc,_0x598272,_0x2d07fb);else _0x49aaec==MainCoin?await SwapNoSplitToMainCoin(_0x1ad5bc,_0x598272):await SwapNoSplit(_0x1ad5bc,_0x598272);}else $(_0x6b3c81(0x1c2))[_0x6b3c81(0x2b8)](_0x6b3c81(0x24e)),console[_0x6b3c81(0x219)](_0x6b3c81(0x14f));}async function SwapNoSplit(_0x1d2a2d,_0x511bf2){var _0x2f306f=_0x17f5a1;console[_0x2f306f(0x219)](_0x2f306f(0x234)),await myContract[_0x2f306f(0x1b8)][_0x2f306f(0x2df)]([_0x1d2a2d[_0x2f306f(0x2b2)][0x0],_0x1d2a2d[_0x2f306f(0x2b2)][_0x1d2a2d[_0x2f306f(0x2b2)][_0x2f306f(0x218)]-0x1],_0x1d2a2d[_0x2f306f(0x2d3)],_0x1d2a2d[_0x2f306f(0x260)]],web3['currentProvider'][_0x2f306f(0x2e1)],_0x511bf2)[_0x2f306f(0x1e2)]({'from':web3[_0x2f306f(0x24d)][_0x2f306f(0x2e1)]},function(_0x5ce866,_0x32a58a){var _0x5cae67=_0x2f306f;!_0x5ce866?(console[_0x5cae67(0x219)](_0x5cae67(0x24c),_0x32a58a),$(_0x5cae67(0x1fe))[_0x5cae67(0x2ef)]()):(console[_0x5cae67(0x219)]('initiate\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20'),$(_0x5cae67(0x1fe))[_0x5cae67(0x2ef)](),_0x5ce866[_0x5cae67(0x2b0)][_0x5cae67(0x213)](_0x5cae67(0x15f))&&console[_0x5cae67(0x219)](_0x5cae67(0x15f)));})[_0x2f306f(0x16f)](_0x2f306f(0x1aa),function(_0x20e352){var _0x2b00b8=_0x2f306f;console[_0x2b00b8(0x219)](_0x2b00b8(0x1fa),_0x20e352);})[_0x2f306f(0x16f)](_0x2f306f(0x168),function(_0x3e50c7){var _0x3cd2ae=_0x2f306f;console[_0x3cd2ae(0x219)](_0x3cd2ae(0x240),_0x3e50c7);});}async function SwapNoSplitFromMainCoin(_0x44c2dc,_0x112a20,_0x1852c7){var _0x1551db=_0x17f5a1;console[_0x1551db(0x219)](_0x1551db(0x13a)),await myContract['methods']['swapNoSplitFromMainCoin']([_0x44c2dc[_0x1551db(0x2b2)][0x0],_0x44c2dc['amounts'][_0x44c2dc[_0x1551db(0x2b2)][_0x1551db(0x218)]-0x1],_0x44c2dc[_0x1551db(0x2d3)],_0x44c2dc[_0x1551db(0x260)]],web3[_0x1551db(0x24d)][_0x1551db(0x2e1)],_0x112a20)['send']({'from':web3[_0x1551db(0x24d)]['selectedAddress'],'value':_0x1852c7},function(_0x4ff751,_0x142ce9){var _0x3cf460=_0x1551db;!_0x4ff751?(console[_0x3cf460(0x219)]('swapNoSplit\x20finish',_0x142ce9),$(_0x3cf460(0x1fe))[_0x3cf460(0x2ef)]()):(console[_0x3cf460(0x219)]('initiate\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20'),$(_0x3cf460(0x1fe))[_0x3cf460(0x2ef)](),_0x4ff751['message'][_0x3cf460(0x213)]('User\x20denied\x20transaction\x20signature')&&console[_0x3cf460(0x219)](_0x3cf460(0x15f)));})[_0x1551db(0x16f)]('transactionHash',function(_0xb83138){var _0x5f46f9=_0x1551db;console[_0x5f46f9(0x219)](_0x5f46f9(0x1fa),_0xb83138);var _0x179249=_0xb83138,_0x5e6b13=_0xb83138[_0x5f46f9(0x294)](0x0,0x14)+'...';$(_0x5f46f9(0x1c2))[_0x5f46f9(0x2b8)](_0x5f46f9(0x2af)+_0x5f46f9(0x17b)+UseScan+_0x5f46f9(0x18e)+_0x179249+'\x22\x20target=\x22_blank\x22\x20>'+_0x5e6b13+'</a>');})['once']('receipt',function(_0x5cd94b){var _0x3d54a0=_0x1551db;console[_0x3d54a0(0x219)](_0x3d54a0(0x240),_0x5cd94b),$(_0x3d54a0(0x1fe))[_0x3d54a0(0x2ef)](),document['getElementById'](_0x3d54a0(0x250))[_0x3d54a0(0x2b9)][_0x3d54a0(0x262)]=_0x3d54a0(0x201);});}async function SwapNoSplitToMainCoin(_0x5a197d,_0x3f3198){var _0x463c8e=_0x17f5a1;console['log'](_0x463c8e(0x2a6),_0x5a197d[_0x463c8e(0x2b2)][0x0]),console[_0x463c8e(0x219)](_0x463c8e(0x2ca)),await myContract[_0x463c8e(0x1b8)][_0x463c8e(0x226)]([_0x5a197d[_0x463c8e(0x2b2)][0x0],_0x5a197d[_0x463c8e(0x2b2)][_0x5a197d[_0x463c8e(0x2b2)][_0x463c8e(0x218)]-0x1],_0x5a197d[_0x463c8e(0x2d3)],_0x5a197d['adapters']],web3[_0x463c8e(0x24d)][_0x463c8e(0x2e1)],_0x3f3198)[_0x463c8e(0x1e2)]({'from':web3[_0x463c8e(0x24d)][_0x463c8e(0x2e1)]},function(_0x545b2c,_0x27f8bf){var _0x1361f4=_0x463c8e;!_0x545b2c?(console[_0x1361f4(0x219)](_0x1361f4(0x24c),_0x27f8bf),$('#loader1')[_0x1361f4(0x2ef)]()):($(_0x1361f4(0x1fe))['hide'](),console[_0x1361f4(0x219)](_0x1361f4(0x151)),_0x545b2c[_0x1361f4(0x2b0)][_0x1361f4(0x213)](_0x1361f4(0x15f))&&console['log'](_0x1361f4(0x15f)));})[_0x463c8e(0x16f)](_0x463c8e(0x1aa),function(_0x2ad38f){var _0x1b942e=_0x463c8e;console[_0x1b942e(0x219)](_0x1b942e(0x1fa),_0x2ad38f);})[_0x463c8e(0x16f)](_0x463c8e(0x168),function(_0x23d85c){var _0x50bd98=_0x463c8e;console[_0x50bd98(0x219)]('receipt:',_0x23d85c);});}function SendEtherOrToken(_0x4e308e){var _0x2a114f=_0x17f5a1;if(_0x4e308e==_0x2a114f(0x257))console['log']('Choice:\x20',_0x4e308e),document[_0x2a114f(0x253)](_0x2a114f(0x1e3))[_0x2a114f(0x118)]=!![],document[_0x2a114f(0x253)]('SendEtherRadioID')[_0x2a114f(0x118)]=![],SendTokenBool=!![],SendFee=(BigInt(ContractFee)+BigInt(web3[_0x2a114f(0x1ce)][_0x2a114f(0x1f3)](BeeFee['toString']())))[_0x2a114f(0x20b)](),console['log'](_0x2a114f(0x1ac),SendFee),$(_0x2a114f(0x2aa))[_0x2a114f(0x1b9)](),$(_0x2a114f(0x26c))[_0x2a114f(0x2ef)](),CurrentTokenDecimals=0x0,$(_0x2a114f(0x1d9))[_0x2a114f(0x2b8)](''),$(_0x2a114f(0x1c2))[_0x2a114f(0x2b8)]('');else _0x4e308e==_0x2a114f(0x2da)&&(SendTokenBool=![],SendFee=0x0,console[_0x2a114f(0x219)]('Choice:\x20',_0x4e308e),document[_0x2a114f(0x253)](_0x2a114f(0x1e3))['checked']=![],document[_0x2a114f(0x253)](_0x2a114f(0x215))[_0x2a114f(0x118)]=!![],CurrentTokenDecimals=0x12,$(_0x2a114f(0x2aa))[_0x2a114f(0x2ef)](),$(_0x2a114f(0x26c))[_0x2a114f(0x1b9)]());}function SendType(_0x29ce29){var _0x21882f=_0x17f5a1;if(_0x29ce29==_0x21882f(0x283))console['log']('Choice:\x20',_0x29ce29),document[_0x21882f(0x253)](_0x21882f(0x200))[_0x21882f(0x118)]=!![],document[_0x21882f(0x253)](_0x21882f(0x230))[_0x21882f(0x118)]=![],$(_0x21882f(0x180))[_0x21882f(0x1b9)](),$(_0x21882f(0x1bc))[_0x21882f(0x2ef)](),$(_0x21882f(0x1d9))['html'](''),$(_0x21882f(0x1c2))['html']('');else _0x29ce29=='UploadCSV'&&(console[_0x21882f(0x219)](_0x21882f(0x190),_0x29ce29),document[_0x21882f(0x253)]('SendSameAmountRadio')[_0x21882f(0x118)]=![],document[_0x21882f(0x253)](_0x21882f(0x230))['checked']=!![],$(_0x21882f(0x180))[_0x21882f(0x2ef)](),$(_0x21882f(0x1bc))[_0x21882f(0x1b9)](),Upload());}function checkRadio(_0x42467b){var _0x7bf2d=_0x17f5a1;if(_0x42467b==_0x7bf2d(0x13e))console[_0x7bf2d(0x219)]('Choice:\x20',_0x42467b),document[_0x7bf2d(0x253)]('one-variable-equations')[_0x7bf2d(0x118)]=!![],document[_0x7bf2d(0x253)](_0x7bf2d(0x209))[_0x7bf2d(0x118)]=![],UseHighGasFee=!![],console['log'](_0x7bf2d(0x279),UseHighGasFee);else _0x42467b==_0x7bf2d(0x158)&&(console['log'](_0x7bf2d(0x190),_0x42467b),document[_0x7bf2d(0x253)]('multiple-variable-equations')[_0x7bf2d(0x118)]=!![],document[_0x7bf2d(0x253)](_0x7bf2d(0x1a5))[_0x7bf2d(0x118)]=![],UseHighGasFee=![],console['log'](_0x7bf2d(0x279),UseHighGasFee));}function Upload(){var _0x51f068=_0x17f5a1,_0x3c3638=document['getElementById'](_0x51f068(0x24b)),_0x3d035e=/^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;if(_0x3d035e[_0x51f068(0x243)](_0x3c3638['value'][_0x51f068(0x291)]())){if(typeof FileReader!=_0x51f068(0x19d)){var _0x2e824e=new FileReader();_0x2e824e[_0x51f068(0x2c7)]=function(_0x25cbe3){var _0x5023b1=_0x51f068,_0x8b4e7e=document[_0x5023b1(0x212)](_0x5023b1(0x22d)),_0x52c3c5=_0x25cbe3[_0x5023b1(0x2ba)]['result'][_0x5023b1(0x23e)]('\x0a');for(var _0x346555=0x0;_0x346555<_0x52c3c5['length'];_0x346555++){var _0x1b88f0=_0x8b4e7e[_0x5023b1(0x113)](-0x1),_0x19705d=_0x52c3c5[_0x346555][_0x5023b1(0x23e)](',');for(var _0x4bd9b9=0x0;_0x4bd9b9<_0x19705d['length'];_0x4bd9b9++){var _0x2f8191=_0x1b88f0[_0x5023b1(0x1f7)](-0x1);_0x2f8191[_0x5023b1(0x2a5)]=_0x19705d[_0x4bd9b9];}}var _0x4daec6=document['getElementById']('dvCSV');_0x4daec6[_0x5023b1(0x2a5)]='',_0x4daec6['appendChild'](_0x8b4e7e);},_0x2e824e[_0x51f068(0x265)](_0x3c3638[_0x51f068(0x1ee)][0x0]);}else $(_0x51f068(0x1c2))['html'](_0x51f068(0x23c)),$('#loader1')[_0x51f068(0x2ef)]();}else $('#Tips')[_0x51f068(0x2b8)]('Please\x20choose\x20a\x20valid\x20CSV\x20file,\x20CSV\x20file\x20name\x20are\x20English\x20letters\x20only,like:\x20abc123.csv'),$('#loader1')[_0x51f068(0x2ef)]();}function _0x1c99(){var _0x24a563=['address/','0x04068da6c83afcfa0e13ba15a6696662335d5b75','val','Balance:\x20','RewardPool:','FTM','Send\x20ETH\x20throgh\x20CSV.....','files','binancecoin','ToToken:','0x57c90b1C343624C224Bc6Edc4841A005E00f350b','toBN','toWei','current_price','change','balanceOf','insertCell','\x20</tr>','534','hash:','options','0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff','#FromListContent','#loader1','networkChanged','SendSameAmountRadio','green','https://phoenixplorer.com/tx/','fill\x20your\x20token\x20address\x20first.','TokenAmount2:','init\x20order\x20contractAdress:','wallet_switchEthereumChain','SelectIWant','</a>','multiple-variable-equations','.png','toString','Use\x20token','SelectOptionID','This\x20is\x20the\x20Fantom\x20\x20network.','reload','Binance\x20Smart\x20Chain\x20Mainnet','#hours','createElement','includes','#UserChooseCoinAddress','SendEtherRadioID','Loading...','Fantom\x20Opera','length','log','\x20</a>','Symbol','\x22>\x20','Metamask\x20not\x20detected','UserChooseFromItem','wallet_addEthereumChain','Can\x20not\x20read\x20This\x20token.','fileUpload:','replace','SendAmount:','\x22\x20width=\x2230\x22\x20height=\x2230\x22>','AddressArea','swapNoSplitToMainCoin','blockExplorerUrls','tokenOut\x20init','Approval\x20failed!','Approval\x20hash:','0x55d398326f99059ff775485246999027b3197955','right\x20MainCoin\x20balance:','table','not\x20MainCoin','MaticPrice:','SendDiffAmountRadio','matic-network','adapterName:','1548648jfLAut','call\x20SwapNoSplit','#SendEtherTitleID','ChooseFromToken:','img/icon/default.png','disabled','AdapterResult:','This\x20is\x20the\x20BSC\x20\x20network.','selectedIndex','This\x20browser\x20does\x20not\x20support\x20HTML5.','BNB','split','ADAPTERS','receipt:','toLocaleString','request','test','0x0000000000000000000000000000000000000000','ReadCSVtoArrayOBJ:','networkId.','https://rpcapi.fantom.network','start','This\x20is\x20fantom\x20mainnet','SendMultiToken\x20CSVEtherTotal:','fileUpload','swapNoSplit\x20finish','currentProvider','Balance\x20not\x20enough\x20or\x20select\x20same\x20coin','each','Tips','FeeReciever:','FetchURL:','getElementById','Token\x20Address\x20Wrong','IReciveAmount','</td><td>','SendToken','BinanceTokens:','Huobi\x20ECO\x20Chain\x20Mainnet','https://ftmscan.com/tx/','chainName','black','#nav\x20li','4486401IUCMzT','\x20class=\x22dropdown-item\x22\x20onclick=\x22ChooseFromToken(\x27','adapters','000','color','Send\x20amount:','\x27)\x22\x20/>','readAsText','_ContractNetworkID','#PriceSuggest','address','BeeFee','toast','img/','#MultiSendButton','do\x20sth..','option','MultiSendAmount','Phoenix','This\x20is\x20the\x20deprecated\x20Morden\x20test\x20network.','push','Not\x20in\x20range,Exit....','<tr><td>','ToImage','parseFloat\x20SendFee:','accountsChanges','NetworkIDIniterWant','UseHighGasFee:\x20','This\x20is\x20Huobi\x20mainnet','EndTime\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract','decimals','CRO','PolygonTokens:','ether','have\x20not\x20approved,please\x20approve\x20first!','json','<tr\x20class=\x22bg-dark\x22>','SameAmount','SendMultiToken\x20SendFee:','#SwapButton','137','floor','CurrentTokenDecimals:','net','BeeFee:','0xc5cB0c289801F0B1B74C4D433Ac5fD5610aB50A0','https://ropsten.etherscan.io/tx/','</td>\x20\x20','eth','ISendAmount','none','toLowerCase','This\x20is\x20the\x20ThunderCore\x20\x20network.','https://http-mainnet.hecochain.com','substring','1029182xVeFum','#seconds','fromWei','ISendPrice:','approve','sort','enable','TokenAddress','findBestPathResult:','<a\x20class=\x27text-secondary\x27\x20href=\x27','ISendChange...','EndTime','ISendInputChange\x20web3.currentProvider.selectedAddress:','getId','getTransactionCount','error','innerHTML','findBestPathResult.amounts[0]:','Binance','Input\x20not\x20>\x200\x20,\x20or\x20same\x20coin\x20selected.','Avalanche','#TokenInfoDiv','appendChild','<span>Hours</span>','Use\x20Adapter\x20:\x20','value','Transaction\x20Hash:\x20\x20','message','https://bscscan.com/tx/','amounts','0x066fE67a495642f2395dba66e9F8925D448b2CD2','FromString:','getGasPrice','web3','QueryAllAdapters\x20error:','html','style','target','UseTokens:','\x20<th>Initer\x20Network</th>\x20\x20','#OverTime','UpdateInfo\x20error:','This\x20is\x20Polygon\x20mainnet','RecieveAmount:','ChooseToToken:','RecieveToken:','tokenIn:','transactionHashLabel','This\x20is\x20the\x20Phoenix\x20network.','BTCPrice','onload','_AddressArray','<th\x20scope=\x22row\x22>','call\x20SwapNoSplitToMainCoin','estimateGas','symbol','https://ftmscan.com','catch','FromButton','Switch\x20\x20tokenOut:','<span>Minutes</span>','1141710kqkVFZ','path','market_data','ToInput','indexOf','TokenDecimals2:','join','\x20class=\x22dropdown-item\x22\x20onclick=\x22ChooseToToken(\x27','SendEther','balance:','ToButton','Reward\x20coins\x20Pool:','This\x20is\x20the\x20BSC\x20test\x20network.','swapNoSplit','This\x20is\x20Cronos\x20mainnet','selectedAddress','.toast','https://polygonscan.com/','FinalBalance2:','0x520827a2897587FcF6c30A9C0e549ec5216148D6','Please\x20upload\x20a\x20valid\x20CSV\x20file.','findBestPath','_AddressArray:','https://etherscan.io/tx/','0xAbaBfd603054c405ca510dC8115d29059A20714A','you\x20select\x20token:','IsMetamask','active','Please\x20choose\x20a\x20valid\x20CSV\x20file,\x20CSV\x20file\x20name\x20are\x20English\x20letters\x20only,like:\x20abc123.csv','hide','_value','test\x20error:','low\x20gas','insertRow','\x20<th>You\x20send</th>\x20','Matic(Polygon)\x20Mainnet','UseTokens\x20:\x20','128','checked','allowance','#SelectIWant','document.getElementById(\x27MultiSendAmount\x27).value','ETH','I\x20Send\x20','options:','6ZClkgP','#transactionHashLabel','https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&sparkline=false','Ropsten\x20Test\x20Network','https://polygonscan.com/tx/','append','queryAdapter','#AddressArea','src','amountIn:','multiSender','https://ftmscan.com/','<a\x20\x20name=\x22','accountsChanged','https://api.coingecko.com/api/v3/simple/price?ids=matic-network%2Cbnb%2Cethereum%2Cbinancecoin&vs_currencies=usd','CurrentBlockchainImageID','initOrder','getApproveStatus:','https://candleexplorer.com/tx/','generate\x20TokenContract:','TempImage:','43114','getBalance','multiSender\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20or\x20less\x20than\x20100','0xc2132d05d31c914a87c6611c10748aeb04b58e8f','_tokenIn\x20','img/icon/','call\x20SwapNoSplitFromMainCoin','addClass','This\x20is\x20the\x20Candle\x20network.','Bitcoin\x20Current\x20Price:\x20$','Medium','_tokenOut\x20','</td></tr>','IRecive:','Network\x20Is\x20wrong,Add\x20or\x20Switch\x20now','<th>Initer\x20Want</th>\x20','UpdateInfo..','0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270','<tr\x20class=\x22bg-warning\x22>','.......','Balance:','#RecieveBalance','https://snowtrace.io/tx/','trans_estimate_gas:','User\x20reject\x20switch\x20network.','ISendInput','This\x20is\x20the\x20huobi\x20network.','Swap:balance\x20not\x20enough\x20or\x20Same\x20coin\x20selected','Send\x20','initiate\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract\x20','ethereum','finalAmount:','toUpperCase','<img\x20class=\x22m-1\x20rounded\x22\x20\x20src=\x22','SwapNow\x20amountIn:','adaptersCount','low','Current\x20Blochchain\x20Network\x20is\x20not\x20support,Switch\x20to\x20Binance,Polygon\x20or\x20other\x20Blockchain\x20please.','getTime','img/exchange/','CANL','multiSender\x20finish','This\x20is\x20Avalanche\x20mainnet','User\x20denied\x20transaction\x20signature','Approval\x20successfull!','Fantom','0xBc4A22F4A76367a4F503BCDfB2c6ee6b115537a7','pow','\x20<th>You\x20get</th>\x20\x20','RewardPool','ReadCSVtoArray\x20TotalAmount:','MainCoin\x20is\x20','receipt','<div\x20class=\x27alert\x20alert-warning\x27\x20role=\x27alert\x27>\x20<a\x20\x20\x20href=\x27https://metamask.io/\x27>Metamask\x20not\x20install,Click\x20to\x20Install\x20Metamask\x20First</a></div>','fullwide','transactionCount:','result','Send\x20amount\x20or\x20address\x20should\x20not\x20be\x20empty','406803XRyBnG','once','then','https://bscscan.com/','18lpSOpg','location','name','\x27\x20target=\x27_blank\x27>\x20','balanceOf:','UseAdapters*****\x20','https://rpc-mainnet.matic.network','10UqBsUq','FromInput','<a\x20href=\x22','Matic','<a\x20href=','display','gasPrice:','#SendSameAmountDiv','innerText','FeeReciever\x20Address:','Avax','#ToListContent','#TradeNowButton','13381','high\x20gas','https://cronoscan.com/tx/','FromImage','#li','hover','1180069gikyYf','fantomLimit:','tx/','TotalETH:','Choice:\x20','Calculating...','tokens','getElementsByTagName','SelectISend:','ReadCSVtoArray\x20SendFee:','<span>Seconds</span>','code','<span>Days</span>','0000000','nameID:','Transaction\x20Hash:\x20','MATIC','undefined','HecoTokens:','This\x20is\x20mainnet','#minutes','Contract','Switch\x20tokenin:','removeAttr','invalid\x20ethereum\x20address','one-variable-equations','#router','CronosTokens:','https://cronoscan.com/','RewardPool\x20can\x20not\x20connect\x20to\x20the\x20smart\x20contract','transactionHash','amount:','SendFee:','SelectIWant:','SelectISend','getPastEvents','MainCoin\x20balance:','Start\x20SendMultiToken','#SendBalance','ISendValue:','250','1.png','#SelectISend','#balanceOf','methods','show','polygonLimit:','toFixed','#SendDiffAmountDiv','This\x20is\x20the\x20ropsten\x20test\x20network.','call','8kmyVTb','getApproveStatus...','Approval\x20receipt:','#Tips','#approveThisButton','<img\x20width=\x2225\x22\x20height=\x2225\x22\x20src=\x22','ReadCSVtoArray\x20CSVEtherTotal:','allEvents','map','not\x20found\x20network,now\x20add\x20it\x20.','</table>','Polygon','#toastButton','toChecksumAddress','_tokenContractAddress:','utils','ETHPrice:','#loader2','trim','129019xkgUct','This\x20is\x20the\x20kovan\x20\x20network.','removeClass','returnValues','AmountIniterWant','</th><td>','TokenDecimals:','#dvCSV','click','approveThis:invalid\x20ethereum\x20address','tokenOut:','#RouterTable','\x20target=\x22_blank\x22>','EndTime:','first','This\x20is\x20an\x20unknown\x20network.','send','SendTokenRadioID','OK...','suggest\x20price:','usd'];_0x1c99=function(){return _0x24a563;};return _0x1c99();}function multiply(_0xa8f373,_0x39cc4d){var _0x4389b3=_0x17f5a1;let _0x5333fc=0x0,_0x43b2cf=0x0;_0xa8f373<0x9&&(_0xa8f373*=0xa,_0x5333fc=0x1);_0x39cc4d<0x9&&(_0x39cc4d*=0xa,_0x43b2cf=0x1);let _0x2a97f9=_0xa8f373[_0x4389b3(0x218)],_0x15bab1=_0x39cc4d['length'],_0x3b52c6=[],_0x5d1d96=[];console[_0x4389b3(0x219)](_0xa8f373,_0x39cc4d);while(_0xa8f373[_0x4389b3(0x218)]>0x7){_0x3b52c6['push'](_0xa8f373[_0x4389b3(0x294)](_0xa8f373[_0x4389b3(0x218)]-0x7,_0xa8f373[_0x4389b3(0x218)])),_0xa8f373=_0xa8f373[_0x4389b3(0x294)](0x0,_0xa8f373[_0x4389b3(0x218)]-0x7);}_0x3b52c6['push'](_0xa8f373);while(_0x39cc4d['length']>0x7){_0x5d1d96[_0x4389b3(0x272)](_0x39cc4d[_0x4389b3(0x294)](_0x39cc4d[_0x4389b3(0x218)]-0x7,_0x39cc4d[_0x4389b3(0x218)])),_0x39cc4d=_0x39cc4d[_0x4389b3(0x294)](0x0,_0x39cc4d['length']-0x7);}_0x5d1d96['push'](_0x39cc4d),_0x3b52c6=_0x3b52c6['reverse'](),_0x5d1d96=_0x5d1d96['reverse'](),console['log'](_0x3b52c6,_0x5d1d96);let _0x2adc7e=[];for(var _0x81d7d5=_0x3b52c6[_0x4389b3(0x218)]-0x1,_0x14cc12=0x0;_0x81d7d5>=0x0;_0x81d7d5--,_0x14cc12++){_0x2adc7e[_0x14cc12]=_0x5d1d96[_0x4389b3(0x1c7)](_0x51da01=>_0x51da01*_0x3b52c6[_0x81d7d5]===NaN?_0x4389b3(0x199):_0x51da01*_0x3b52c6[_0x81d7d5]);var _0x1a05cc=0x0;while(_0x1a05cc<_0x14cc12){_0x2adc7e[_0x14cc12][_0x4389b3(0x272)](0x0),_0x1a05cc+=0x1;}}console[_0x4389b3(0x219)](_0x2adc7e);var _0x29b1af=_0x2adc7e[_0x2adc7e[_0x4389b3(0x218)]-0x1];for(var _0x14cc12=0x1;_0x14cc12<_0x29b1af['length'];_0x14cc12++){for(var _0x81d7d5=0x0;_0x81d7d5<_0x2adc7e[_0x4389b3(0x218)]-0x1;_0x81d7d5++){_0x2adc7e[_0x81d7d5][_0x4389b3(0x218)]>=_0x14cc12&&(_0x29b1af[_0x29b1af[_0x4389b3(0x218)]-_0x14cc12]+=_0x2adc7e[_0x81d7d5][_0x2adc7e[_0x81d7d5][_0x4389b3(0x218)]-_0x14cc12]);}}console[_0x4389b3(0x219)](_0x29b1af);let _0x19e440=[];for(var _0x81d7d5=0x0;_0x81d7d5<_0x29b1af[_0x4389b3(0x218)];_0x81d7d5++){_0x19e440[_0x4389b3(0x272)]('');}for(var _0x81d7d5=0x1;_0x81d7d5<=_0x29b1af[_0x4389b3(0x218)];_0x81d7d5++)if(_0x81d7d5!==_0x29b1af['length'])_0x19e440[_0x19e440[_0x4389b3(0x218)]-_0x81d7d5]=_0x29b1af[_0x29b1af[_0x4389b3(0x218)]-_0x81d7d5][_0x4389b3(0x20b)]()['substring'](_0x29b1af[_0x29b1af['length']-_0x81d7d5][_0x4389b3(0x20b)]()[_0x4389b3(0x218)]-0x7,_0x29b1af[_0x29b1af[_0x4389b3(0x218)]-_0x81d7d5][_0x4389b3(0x20b)]()[_0x4389b3(0x218)]),_0x29b1af[_0x29b1af[_0x4389b3(0x218)]-_0x81d7d5-0x1]+=parseInt(_0x29b1af[_0x29b1af[_0x4389b3(0x218)]-_0x81d7d5][_0x4389b3(0x20b)]()[_0x4389b3(0x294)](0x0,_0x29b1af[_0x29b1af[_0x4389b3(0x218)]-_0x81d7d5][_0x4389b3(0x20b)]()[_0x4389b3(0x218)]-0x7));else _0x19e440[0x0]=_0x29b1af[0x0];return console[_0x4389b3(0x219)](_0x19e440),console['log'](_0xa8f373,_0x39cc4d),_0x5333fc&&(_0x19e440[_0x19e440[_0x4389b3(0x218)]-0x1]/=0xa),_0x43b2cf&&(_0x19e440[_0x19e440['length']-0x1]/=0xa),_0x19e440['join']('');}async function ReadCSVtoArray(){var _0x14c1e8=_0x17f5a1;let _0x2f4874=[],_0x2aebc6=[];var _0x5bcfaf=document['getElementById'](_0x14c1e8(0x24b)),_0x4c084e=/^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;if(_0x4c084e[_0x14c1e8(0x243)](_0x5bcfaf[_0x14c1e8(0x2ae)][_0x14c1e8(0x291)]())){if(typeof FileReader!=_0x14c1e8(0x19d)){var _0x371722=new FileReader();return _0x371722[_0x14c1e8(0x2c7)]=function(_0x57691d){var _0x272979=_0x14c1e8,_0x3c2730=document[_0x272979(0x212)]('table'),_0x24aa18=_0x57691d['target'][_0x272979(0x16c)][_0x272979(0x23e)]('\x0a'),_0x46cd16=0x0;for(var _0x3b8c1b=0x0;_0x3b8c1b<_0x24aa18['length'];_0x3b8c1b++){var _0x162df2=_0x3c2730[_0x272979(0x113)](-0x1),_0x39fb97=_0x24aa18[_0x3b8c1b][_0x272979(0x23e)](',');if(_0x39fb97[0x0]!=''&&_0x39fb97[0x1]!=''){_0x2f4874[_0x272979(0x272)]($[_0x272979(0x1d1)](_0x39fb97[0x0]));var _0x19cb4c=BigNumber(parseInt(_0x39fb97[0x1]*Math[_0x272979(0x163)](0xa,CurrentTokenDecimals[_0x272979(0x20b)]()))[_0x272979(0x20b)]()),_0x48200c=web3['utils'][_0x272979(0x1f2)](_0x19cb4c);_0x46cd16=_0x46cd16+parseInt(web3[_0x272979(0x1ce)][_0x272979(0x1f3)](parseFloat(_0x39fb97[0x1])[_0x272979(0x20b)]())),console['log'](_0x272979(0x1ab),parseFloat(_0x39fb97[0x1])),_0x2aebc6[_0x272979(0x272)](_0x48200c);}for(var _0x395e08=0x0;_0x395e08<_0x39fb97[_0x272979(0x218)];_0x395e08++){var _0x2492cb=_0x162df2[_0x272979(0x1f7)](-0x1);_0x2492cb['innerHTML']=_0x39fb97[_0x395e08];}}if(document[_0x272979(0x253)]('SendEtherRadioID')[_0x272979(0x118)]){console[_0x272979(0x219)](_0x272979(0x1ed)),CSVEtherTotal=_0x46cd16,console[_0x272979(0x219)](_0x272979(0x288),CurrentTokenDecimals),console['log'](_0x272979(0x166),_0x46cd16),console[_0x272979(0x219)](_0x272979(0x1c5),CSVEtherTotal);var _0x49b614=BigNumber((CSVEtherTotal*Math['pow'](0xa,CurrentTokenDecimals[_0x272979(0x20b)]()))['toString']()),_0x419e89=web3[_0x272979(0x1ce)][_0x272979(0x1f3)](parseInt(_0x49b614)[_0x272979(0x20b)]());console[_0x272979(0x219)]('CSVEtherTotal',parseFloat(CSVEtherTotal)),console[_0x272979(0x219)]('ContractFee',web3[_0x272979(0x1ce)][_0x272979(0x297)](ContractFee)),console['log'](_0x272979(0x269),parseFloat(BeeFee)),SendFee=BigInt(CSVEtherTotal)+BigInt(parseInt(ContractFee))+BigInt(web3['utils'][_0x272979(0x1f3)](BeeFee['toString']())),console[_0x272979(0x219)](_0x272979(0x276),SendFee),SendFee=SendFee[_0x272979(0x20b)](),console[_0x272979(0x219)](_0x272979(0x195),SendFee[_0x272979(0x20b)]());}var _0x1b89f1=document['getElementById']('dvCSV');_0x1b89f1[_0x272979(0x2a5)]='',_0x1b89f1[_0x272979(0x2ab)](_0x3c2730);},_0x371722[_0x14c1e8(0x265)](_0x5bcfaf['files'][0x0]),{'_AddressArray':_0x2f4874,'_AmountArray':_0x2aebc6};}else $(_0x14c1e8(0x1c2))[_0x14c1e8(0x2b8)]('This\x20browser\x20does\x20not\x20support\x20HTML5.'),$(_0x14c1e8(0x1fe))[_0x14c1e8(0x2ef)]();}else $(_0x14c1e8(0x1c2))[_0x14c1e8(0x2b8)](_0x14c1e8(0x2e6)),$('#loader1')[_0x14c1e8(0x2ef)]();}$('#fileUpload')[_0x17f5a1(0x1f5)](function(){var _0x2d361b=_0x17f5a1;$('#transactionHashLabel')[_0x2d361b(0x2b8)](''),$('#Tips')[_0x2d361b(0x2b8)](''),Upload();}),$(_0x17f5a1(0x18a))[_0x17f5a1(0x18b)](function(){var _0x233590=_0x17f5a1;$(_0x233590(0x25d))[_0x233590(0x1d4)]('active'),$(this)[_0x233590(0x13b)](_0x233590(0x2ed));},function(){var _0x4dcad6=_0x17f5a1;$(this)[_0x4dcad6(0x1d4)]('active'),$(_0x4dcad6(0x25d))[_0x4dcad6(0x1e0)]()[_0x4dcad6(0x13b)](_0x4dcad6(0x2ed));});var delayTimer;function delayRun(_0x39e1cc){clearTimeout(delayTimer),delayTimer=setTimeout(function(){var _0x376842=_0x5c5f;console[_0x376842(0x219)](_0x376842(0x26d),_0x39e1cc),UpdateInfo();},0x3e8);}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
