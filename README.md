@@ -1,7 +1,7 @@
 # MoonSwap
 #### Aggregator DAPP
 
-Ethereum,Binance,Huobi,Fantom,Polygon and Ropsten testnetwork.<br><br>
+Ethereum,Binance,Huobi,Fantom,Polygon,Cronos and Ropsten testnetwork.<br><br>
 <img src="https://github.com/CryptoDappRun/MoonSwap/blob/main/img/1.png" width="25" height="25" alt="eth"> 
 <img src="https://github.com/CryptoDappRun/MoonSwap/blob/main/img/56.png" width="25" height="25" alt="bnb">
 <img src="https://github.com/CryptoDappRun/MoonSwap/blob/main/img/250.png" width="25" height="25" alt="ftm">
