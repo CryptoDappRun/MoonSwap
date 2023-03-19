@@ -165,7 +165,7 @@ let BinanceTokens={
   {
     "chainId": 56,
     "type": "ERC20",
-    "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
     "name": "Binance-peg Dai Token",
     "symbol": "DAI",
     "decimals": 18,
